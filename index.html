@@ -3,76 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextGenStacks | Your Gateway to Future Tools</title>
+    <title>NextGenStacks | Your Gateway to Premium Tech</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #030712; }
-        .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        body { background-color: #0f172a; font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); }
+        .hero-gradient { background: radial-gradient(circle at top right, #3b82f633, transparent); }
     </style>
 </head>
-<body class="text-slate-200">
+<body class="text-slate-200 min-h-screen hero-gradient">
 
-    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
-        <div class="text-2xl font-extrabold tracking-tighter text-white">NextGen<span class="text-sky-400">Stacks</span></div>
+    <nav class="p-6 max-w-7xl mx-auto flex justify-between items-center">
+        <div class="text-2xl font-bold bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent">
+            NextGenStacks
+        </div>
         <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
-            <a href="#" class="hover:text-white transition">AI Tools</a>
-            <a href="#" class="hover:text-white transition">Design</a>
-            <a href="#" class="hover:text-white transition">Hosting</a>
-            <a href="#" class="hover:text-white transition">Resources</a>
+            <a href="#" class="hover:text-sky-400 transition">AI Tools</a>
+            <a href="#" class="hover:text-sky-400 transition">Hosting</a>
+            <a href="#" class="hover:text-sky-400 transition">Resources</a>
         </div>
     </nav>
 
-    <section class="max-w-7xl mx-auto px-6 py-20 text-center">
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
-            Level Up Your <span class="gradient-text">Digital Empire</span>
+    <header class="max-w-7xl mx-auto px-6 py-20 text-center">
+        <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">
+            Level Up Your <span class="text-sky-500">Digital Empire</span>
         </h1>
-        <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
-            We curate the most powerful AI tools, premium assets, and elite hosting solutions to help you build, scale, and automate.
+        <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-10">
+            Curated selection of the world's most powerful AI tools, hosting solutions, and digital assets to accelerate your growth.
         </p>
-        <div class="flex flex-col md:flex-row gap-4 justify-center">
-            <a href="#explore" class="bg-sky-500 hover:bg-sky-400 text-white px-8 py-4 rounded-full font-bold transition shadow-lg shadow-sky-500/20">Start Exploring</a>
-            <a href="#" class="glass hover:bg-white/5 text-white px-8 py-4 rounded-full font-bold transition">View Top Stacks</a>
-        </div>
-    </section>
+    </header>
 
-    <section id="explore" class="max-w-7xl mx-auto px-6 py-20">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <section class="max-w-7xl mx-auto px-6 py-10">
+        <h2 class="text-3xl font-bold mb-10 text-white border-l-4 border-sky-500 pl-4">Elite Tech Deals</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            <div class="glass p-8 rounded-3xl hover:border-sky-500/50 transition group">
-                <div class="text-4xl mb-4">🤖</div>
-                <h3 class="text-xl font-bold mb-2">AI Powerhouses</h3>
-                <p class="text-slate-400 text-sm mb-6">Revolutionize your workflow with the best AI writing, video, and image tools.</p>
-                <a href="#" class="text-sky-400 font-semibold group-hover:underline">Browse AI →</a>
+            <div class="glass p-8 rounded-3xl border border-white/10 hover:border-sky-500/50 transition duration-500">
+                <span class="bg-sky-500/20 text-sky-400 text-xs font-bold px-3 py-1 rounded-full uppercase">Top AI Tool</span>
+                <h3 class="text-2xl font-bold mt-4 mb-3 text-white">Jasper AI</h3>
+                <p class="text-slate-400 text-sm mb-6 leading-relaxed">The ultimate AI content platform. Create high-quality blog posts, ads, and emails in seconds.</p>
+                <div class="text-sky-400 font-bold text-lg mb-6">Free Trial Available</div>
+                <a href="https://www.jasper.ai/" target="_blank" class="block text-center bg-sky-600 hover:bg-sky-500 text-white py-3 rounded-xl transition font-bold shadow-lg shadow-sky-900/20">Get The Deal</a>
+            </div>
+            
+            <div class="glass p-8 rounded-3xl border border-white/10 hover:border-purple-500/50 transition duration-500">
+                <span class="bg-purple-500/20 text-purple-400 text-xs font-bold px-3 py-1 rounded-full uppercase">Fast Hosting</span>
+                <h3 class="text-2xl font-bold mt-4 mb-3 text-white">Hostinger</h3>
+                <p class="text-slate-400 text-sm mb-6 leading-relaxed">Premium web hosting with 99.9% uptime. Perfect for building your first global website.</p>
+                <div class="text-purple-400 font-bold text-lg mb-6">75% OFF + Free Domain</div>
+                <a href="https://www.hostinger.com/" target="_blank" class="block text-center bg-purple-600 hover:bg-purple-500 text-white py-3 rounded-xl transition font-bold shadow-lg shadow-purple-900/20">Claim Discount</a>
             </div>
 
-            <div class="glass p-8 rounded-3xl hover:border-purple-500/50 transition group">
-                <div class="text-4xl mb-4">🎨</div>
-                <h3 class="text-xl font-bold mb-2">Design Assets</h3>
-                <p class="text-slate-400 text-sm mb-6">Premium UI kits, fonts, and graphics to make your projects stand out.</p>
-                <a href="#" class="text-purple-400 font-semibold group-hover:underline">Explore Assets →</a>
-            </div>
-
-            <div class="glass p-8 rounded-3xl hover:border-emerald-500/50 transition group">
-                <div class="text-4xl mb-4">🌐</div>
-                <h3 class="text-xl font-bold mb-2">Fast Hosting</h3>
-                <p class="text-slate-400 text-sm mb-6">Scale without limits. We compare the most reliable hosting for high traffic.</p>
-                <a href="#" class="text-emerald-400 font-semibold group-hover:underline">Find Hosting →</a>
-            </div>
-
-            <div class="glass p-8 rounded-3xl hover:border-orange-500/50 transition group">
-                <div class="text-4xl mb-4">💻</div>
-                <h3 class="text-xl font-bold mb-2">Code & Scripts</h3>
-                <p class="text-slate-400 text-sm mb-6">Automation scripts and pre-built components for modern developers.</p>
-                <a href="#" class="text-orange-400 font-semibold group-hover:underline">Get Scripts →</a>
+            <div class="glass p-8 rounded-3xl border border-white/10 hover:border-emerald-500/50 transition duration-500">
+                <span class="bg-emerald-500/20 text-emerald-400 text-xs font-bold px-3 py-1 rounded-full uppercase">Design Guru</span>
+                <h3 class="text-2xl font-bold mt-4 mb-3 text-white">Canva Pro</h3>
+                <p class="text-slate-400 text-sm mb-6 leading-relaxed">Professional design made easy. Access millions of premium templates and AI features.</p>
+                <div class="text-emerald-400 font-bold text-lg mb-6">Start Free Trial</div>
+                <a href="https://www.canva.com/" target="_blank" class="block text-center bg-emerald-600 hover:bg-emerald-500 text-white py-3 rounded-xl transition font-bold shadow-lg shadow-emerald-900/20">Explore Pro</a>
             </div>
 
         </div>
     </section>
 
-    <footer class="text-center py-10 border-t border-white/5 text-slate-500 text-sm">
-        &copy; 2026 NextGenStacks. Managed by AI Agent for the Global Market.
+    <footer class="mt-20 py-10 border-t border-white/5 text-center text-slate-500 text-sm">
+        <p>&copy; 2026 NextGenStacks. All rights reserved. Designed for the Global Tech Community.</p>
     </footer>
 
 </body>
