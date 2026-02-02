@@ -15,26 +15,30 @@
         .glow-red { box-shadow: 0 0 30px rgba(239, 68, 68, 0.4); }
         .glow-blue { box-shadow: 0 0 30px rgba(59, 130, 246, 0.4); }
 
-        /* Background Sections with Images */
+        /* Cinematic Hero Logic */
         .hero-img-bg { 
-            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), 
-            url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070');
-            background-attachment: fixed; background-size: cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(15, 23, 42, 0.6)), 
+            url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072');
+            background-attachment: fixed; background-size: cover; background-position: center;
         }
+
+        /* Opening Cinematic Animation */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); filter: blur(10px); }
+            to { opacity: 1; transform: translateY(0); filter: blur(0); }
+        }
+
+        .reveal-1 { animation: fadeInUp 1s ease out forwards; }
+        .reveal-2 { animation: fadeInUp 1s ease out 0.4s forwards; opacity: 0; }
+        .reveal-3 { animation: fadeInUp 1s ease out 0.8s forwards; opacity: 0; }
 
         /* Irregular Shape Articles */
         .irregular-card-1 { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
         .irregular-card-2 { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
 
-        /* Interactive Elements */
         .click-bounce:active { transform: scale(0.95); }
         .hover-lift { transition: all 0.3s ease; }
         .hover-lift:hover { transform: translateY(-10px) rotate(1deg); }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 10px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: #0f172a; }
     </style>
 </head>
 <body>
@@ -53,39 +57,57 @@
             <a href="#" class="hover:text-yellow-500 transition border-b-2 border-transparent hover:border-yellow-500">Team Insights</a>
         </div>
 
-        <button class="bg-black text-white px-8 py-3 font-black text-xs hover:bg-red-600 transition click-bounce glow-red">
-            PARTNER ACCESS
+        <button class="bg-black text-white px-8 py-3 font-black text-xs hover:bg-red-600 transition click-bounce glow-red tracking-[0.2em]">
+            SYSTEM ACCESS
         </button>
     </nav>
 
-    <header class="hero-img-bg h-[80vh] flex items-center justify-center text-center px-8 border-b-8 border-black">
-        <div class="max-w-5xl">
-            <h1 class="u-font text-6xl md:text-9xl text-white leading-none mb-8 drop-shadow-2xl">
-                WE BUILD <br> <span class="bg-yellow-400 text-black px-4 italic">THE FUTURE.</span>
+    <header class="hero-img-bg h-screen flex items-center justify-center text-center px-8 border-b-8 border-black relative overflow-hidden">
+        <div class="max-w-4xl relative z-10">
+            <div class="reveal-1">
+                <span class="bg-blue-600 text-white text-[10px] font-black px-4 py-2 tracking-[0.5em] uppercase mb-8 inline-block shadow-2xl">
+                    Engineering Trust in Every Stack
+                </span>
+            </div>
+            
+            <h1 class="u-font text-5xl md:text-[85px] text-white leading-[1] mb-8 drop-shadow-2xl reveal-2">
+                THE <span class="text-yellow-400">ARCHITECTS</span> <br> OF DIGITAL ASSETS
             </h1>
-            <p class="text-white text-xl md:text-2xl font-bold bg-blue-600 inline-block px-6 py-2 mb-10">
-                A Multi-Disciplinary Team Architecture for 2026
-            </p>
+            
+            <div class="reveal-3">
+                <p class="text-slate-300 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed mb-12">
+                    Expert-led analysis. Stress-tested infrastructure. <br>
+                    We deploy the tools that power the <span class="text-white font-bold italic underline decoration-red-500">NextGen</span> of global commerce.
+                </p>
+                <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                    <button class="bg-white text-black px-12 py-4 u-font text-xs font-black glow-yellow hover:bg-yellow-400 transition-all click-bounce">
+                        EXPLORE DIRECTORY
+                    </button>
+                    <button class="border-2 border-white/30 text-white px-12 py-4 u-font text-xs font-black hover:bg-white hover:text-black transition-all">
+                        OUR TESTING LAB
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+            <div class="w-1 h-12 bg-gradient-to-t from-white to-transparent rounded-full"></div>
         </div>
     </header>
 
     <section class="py-24 px-8 bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-                
                 <div class="irregular-card-1 bg-red-500 p-12 text-white hover-lift click-bounce cursor-pointer group shadow-2xl">
                     <span class="font-black text-xs uppercase tracking-[0.3em] opacity-70">Research #01</span>
                     <h2 class="u-font text-3xl font-black mt-4 mb-6">Jasper AI: Neural Deep Dive</h2>
                     <p class="font-bold leading-relaxed opacity-90">Our engineering team spent 400 hours benchmarking Jasper's API against local Iraqi network latencies. The efficiency results are staggering.</p>
                 </div>
-
                 <div class="irregular-card-2 bg-yellow-400 p-12 text-black hover-lift click-bounce cursor-pointer shadow-2xl">
                     <span class="font-black text-xs uppercase tracking-[0.3em] opacity-70">Performance #42</span>
                     <h2 class="u-font text-3xl font-black mt-4 mb-6">Cloud Velocity Scaling</h2>
                     <p class="font-bold leading-relaxed">Infrastructure isn't just about speed; it's about stability. We analyzed Hostinger's NVMe resilience in extreme traffic surges.</p>
                 </div>
-
-                <div class="irregular-card-1 bg-blue-600 p-12 text-white hover-lift click-bounce cursor-pointer shadow-2xl">
+                <div class="irregular-card-1 bg-blue-600 p-12 text-white hover-lift click-bounce shadow-2xl">
                     <span class="font-black text-xs uppercase tracking-[0.3em] opacity-70">Strategy #09</span>
                     <h2 class="u-font text-3xl font-black mt-4 mb-6">Visual ROI Protocol</h2>
                     <p class="font-bold leading-relaxed">How our design team uses Canva Pro to automate branding for 12 projects simultaneously without losing soul.</p>
@@ -99,14 +121,14 @@
             <div class="grid lg:grid-cols-2 gap-20">
                 <div class="space-y-12">
                     <div class="border-l-8 border-yellow-400 pl-8">
-                        <h2 class="u-font text-4xl mb-6 tracking-tighter text-yellow-400 uppercase">Our Collective Mission</h2>
-                        <p class="text-slate-400 leading-loose font-bold">
+                        <h2 class="u-font text-4xl mb-6 tracking-tighter text-yellow-400 uppercase text-left">Our Collective Mission</h2>
+                        <p class="text-slate-400 leading-loose font-bold text-left">
                             At NextGenStacks, we don't believe in solo experts. We are a collective of developers, data scientists, and creative directors working in unison. Our goal is to provide a transparent, rigorous, and completely unbiased analysis of the digital tools that power modern empires. Every review you read is the result of a cross-departmental stress test.
                         </p>
                     </div>
                     <div class="border-l-8 border-red-500 pl-8">
-                        <h2 class="u-font text-4xl mb-6 tracking-tighter text-red-500 uppercase">The Vetting Process</h2>
-                        <p class="text-slate-400 leading-loose font-bold">
+                        <h2 class="u-font text-4xl mb-6 tracking-tighter text-red-500 uppercase text-left">The Vetting Process</h2>
+                        <p class="text-slate-400 leading-loose font-bold text-left">
                             Integrity is our core currency. We purchase every piece of software we review with our own capital. We do not accept sponsored content that dictates our results. When we recommend a stack, it's because it survived our "Black-Box" testing environment, where we push software to its absolute breaking point to ensure it will never fail our partners.
                         </p>
                     </div>
@@ -119,7 +141,6 @@
                             <span class="text-blue-400 font-black">99.8%</span>
                         </div>
                         <div class="w-full bg-white/5 h-4 rounded-full overflow-hidden"><div class="bg-blue-600 h-full w-[99.8%]"></div></div>
-                        
                         <div class="flex justify-between items-center">
                             <span class="font-black text-[10px] uppercase tracking-widest">Market Response Time</span>
                             <span class="text-yellow-400 font-black">0.4s</span>
@@ -132,7 +153,7 @@
     </section>
 
     <footer class="bg-white pt-32 pb-12 px-8 border-t-8 border-black">
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-7xl mx-auto text-left">
             <div class="flex flex-wrap gap-20 mb-24 items-start">
                 <div class="flex-1 min-w-[300px]">
                     <h4 class="u-font text-3xl font-black mb-10 tracking-tighter uppercase">NGS / Official Disclosure</h4>
@@ -140,7 +161,10 @@
                         The information provided on NextGenStacks is for educational and strategic purposes only. Every digital infrastructure deployment involves inherent risk. While our team of experts meticulously tests every platform mentioned, we encourage individual due diligence. We may receive commissions from some of the tools analyzed through our strategic partnership with platforms like Digistore24; however, this does not influence our rigorous "Failure-First" testing methodology. Our loyalty remains exclusively to the end-user and the integrity of the stack.
                     </p>
                     <div class="flex gap-4">
-                        <div class="w-12 h-12 bg-black rounded-lg"></div> <div class="w-12 h-12 bg-black rounded-lg"></div> <div class="w-12 h-12 bg-black rounded-lg"></div> </div>
+                        <div class="w-12 h-12 bg-black rounded-lg"></div>
+                        <div class="w-12 h-12 bg-black rounded-lg"></div>
+                        <div class="w-12 h-12 bg-black rounded-lg"></div>
+                    </div>
                 </div>
                 <div class="w-full lg:w-1/3 grid grid-cols-2 gap-10">
                     <div>
