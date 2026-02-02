@@ -1,185 +1,106 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextGenStacks | The Authority in Digital Infrastructure</title>
+    <title>NextGenStacks | Premium Tech Infrastructure</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #050505; --card: #0c0c0c; --accent: #3b82f6; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: #a1a1aa; }
-        .serif { font-family: 'Playfair Display', serif; }
-        .glass-nav { background: rgba(5, 5, 5, 0.8); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .section-divider { border-top: 1px solid rgba(255,255,255,0.03); }
-        .feature-card { background: var(--card); border: 1px solid #1a1a1a; transition: all 0.4s ease; }
-        .feature-card:hover { border-color: var(--accent); background: #111; }
-        .gradient-heading { background: linear-gradient(to bottom, #fff 40%, #555 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        :root { --accent: #3b82f6; --dark: #020617; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--dark); color: #94a3b8; overflow-x: hidden; }
+        .h-font { font-family: 'Outfit', sans-serif; }
+        .hero-vignette { 
+            background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 80%);
+        }
+        .image-container { position: relative; overflow: hidden; border-radius: 24px; }
+        .image-container img { transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
+        .article-card:hover img { transform: scale(1.1); }
+        .glass-header { background: rgba(2, 6, 23, 0.7); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05); }
     </style>
 </head>
-<body>
+<body class="hero-vignette">
 
-    <nav class="fixed w-full z-50 glass-nav">
-        <div class="max-w-7xl mx-auto px-8 h-20 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-blue-600 rounded-sm"></div>
-                <span class="text-white font-bold tracking-tighter text-xl uppercase">NextGen Stacks</span>
+    <nav class="fixed w-full z-50 glass-header">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-700 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20">
+                    <span class="text-white font-black text-xl">N</span>
+                </div>
+                <span class="h-font text-xl text-white font-bold tracking-tighter uppercase">NextGen <span class="text-blue-500 italic">Stacks</span></span>
             </div>
-            <div class="hidden lg:flex gap-12 text-[11px] font-bold uppercase tracking-[0.2em]">
+            <div class="hidden lg:flex gap-10 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500">
+                <a href="#lab" class="hover:text-blue-400 transition">Tech Lab</a>
+                <a href="#insights" class="hover:text-blue-400 transition">Expert Insights</a>
                 <a href="#stacks" class="hover:text-white transition">The Directory</a>
-                <a href="#philosophy" class="hover:text-white transition">Our Philosophy</a>
-                <a href="#reviews" class="hover:text-white transition">Expert Reviews</a>
-                <a href="#contact" class="hover:text-white transition">Partner With Us</a>
             </div>
-            <button class="border border-white/20 px-6 py-2 rounded-full text-xs font-bold text-white hover:bg-white hover:text-black transition">JOIN HUB</button>
+            <button class="bg-blue-600 hover:bg-blue-500 text-white text-[10px] font-bold px-8 py-3 rounded-full transition-all shadow-lg shadow-blue-900/40">PARTNER LOGIN</button>
         </div>
     </nav>
 
-    <section class="pt-48 pb-32 px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <span class="text-blue-500 font-bold tracking-[0.3em] text-[10px] uppercase mb-4 block">Independent Tech Curation</span>
-                    <h1 class="text-6xl md:text-8xl font-bold text-white leading-[0.9] mb-8 gradient-heading">Engineering <br> Your Growth.</h1>
-                    <p class="text-xl leading-relaxed text-slate-400 mb-10 max-w-xl text-left">
-                        We don't just list tools; we architect digital ecosystems. NextGenStacks is a dedicated hub for professionals seeking high-performance AI, hosting, and design infrastructure. 
-                    </p>
-                    <div class="flex gap-6">
-                        <a href="#stacks" class="bg-blue-600 text-white px-8 py-4 rounded-md font-bold text-sm hover:bg-blue-700 transition">Explore The Stacks</a>
-                        <div class="flex flex-col">
-                            <span class="text-white font-bold">120+</span>
-                            <span class="text-[10px] uppercase tracking-widest">Tools Analyzed</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="hidden lg:block">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-[#0c0c0c] p-8 border border-white/5 rounded-2xl mt-12">
-                            <h4 class="text-white font-bold mb-2 uppercase text-xs tracking-widest">Precision</h4>
-                            <p class="text-xs leading-relaxed">Every tool is tested for 30+ days before making it to our list.</p>
-                        </div>
-                        <div class="bg-[#0c0c0c] p-8 border border-white/5 rounded-2xl">
-                            <h4 class="text-white font-bold mb-2 uppercase text-xs tracking-widest">Integration</h4>
-                            <p class="text-xs leading-relaxed">We focus on how tools talk to each other to save you time.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="pt-48 pb-20 px-8 text-center relative">
+        <div class="max-w-5xl mx-auto">
+            <span class="inline-block mb-6 px-4 py-1.5 rounded-full border border-blue-500/20 bg-blue-500/5 text-blue-400 text-[11px] font-bold uppercase tracking-widest">
+                Curating Global Digital Infrastructure
+            </span>
+            <h1 class="h-font text-6xl md:text-8xl font-bold text-white leading-[1.1] tracking-tighter mb-8">
+                Build Fast. <br> <span class="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">Scale Infinite.</span>
+            </h1>
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed mb-12">
+                We bridge the gap between complex software and your digital success. Detailed reviews, stress-tests, and architectural guides for the next generation of builders.
+            </p>
         </div>
     </section>
 
-    <section id="philosophy" class="py-24 section-divider px-8 bg-[#080808]">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row gap-12 items-center">
-                <div class="md:w-1/3">
-                    <h2 class="serif text-4xl text-white italic">Why trust our curation?</h2>
+    <main id="insights" class="max-w-7xl mx-auto px-6 py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-32">
+            <div class="article-card group">
+                <div class="image-container mb-8 aspect-video">
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4628c6757?auto=format&fit=crop&q=80&w=1200" alt="AI Review" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
                 </div>
-                <div class="md:w-2/3 grid md:grid-cols-2 gap-8 text-sm leading-loose">
-                    <p>In an era of AI noise, choosing the right stack is the difference between scaling and stalling. We bypass the marketing hype to bring you raw data on uptime, latency, and actual output quality.</p>
-                    <p>Our mission is to empower creators in emerging markets—from Iraq to the globe—by providing access to the same high-tier infrastructure used by Silicon Valley startups.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="stacks" class="py-32 px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex justify-between items-end mb-16">
-                <div>
-                    <h3 class="text-3xl font-bold text-white mb-4">The Core Directory</h3>
-                    <p class="text-sm">Categorized by purpose, performance, and scalability.</p>
-                </div>
-                <div class="flex gap-2">
-                    <span class="w-3 h-3 rounded-full bg-blue-600"></span>
-                    <span class="w-3 h-3 rounded-full bg-zinc-800"></span>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-1">
-                <div class="feature-card p-10 text-left">
-                    <div class="mb-20">
-                        <span class="text-xs font-bold text-zinc-600 uppercase tracking-widest">01 / Artificial Intelligence</span>
+                <div class="text-left">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="text-[10px] font-black text-blue-500 uppercase tracking-widest">Master Review</span>
+                        <div class="h-[1px] w-12 bg-blue-500/20"></div>
+                        <span class="text-[10px] text-slate-600">30 MIN READ</span>
                     </div>
-                    <h4 class="text-2xl font-bold text-white mb-4">Jasper AI: The Content King</h4>
-                    <p class="text-sm leading-relaxed mb-8">Not just a chatbot. Jasper is an enterprise-grade engine for SEO-optimized content and global ad campaigns.</p>
-                    <ul class="text-[11px] space-y-3 mb-10 uppercase tracking-wider">
-                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-blue-500"></span> Custom Brand Voice</li>
-                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-blue-500"></span> API Integration</li>
-                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-blue-500"></span> Multilingual Support</li>
-                    </ul>
-                    <a href="#" class="text-white text-xs font-bold border-b border-blue-600 pb-1 hover:text-blue-500 transition">DETAILED REVIEW →</a>
+                    <h2 class="h-font text-4xl text-white font-bold mb-6 group-hover:text-blue-400 transition">Jasper AI: The Architecture of Modern Copywriting</h2>
+                    <p class="text-slate-400 leading-loose mb-8">We dissected Jasper's neural engine to see if it truly understands brand voice. The results redefine everything we knew about AI-driven marketing workflows.</p>
+                    <a href="#" class="inline-flex items-center gap-2 text-white font-bold text-xs uppercase tracking-widest border-b-2 border-blue-600 pb-1">Enter Deep Dive →</a>
                 </div>
+            </div>
 
-                <div class="feature-card p-10 text-left">
-                    <div class="mb-20">
-                        <span class="text-xs font-bold text-zinc-600 uppercase tracking-widest">02 / Infrastructure</span>
+            <div class="space-y-12">
+                <div class="flex flex-col md:flex-row gap-8 group">
+                    <div class="w-full md:w-48 h-32 rounded-2xl overflow-hidden flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition">
                     </div>
-                    <h4 class="text-2xl font-bold text-white mb-4">Hostinger Cloud Scaling</h4>
-                    <p class="text-sm leading-relaxed mb-8">We analyzed latency across 7 regions. Hostinger remains the most cost-effective solution for high-traffic projects.</p>
-                    <ul class="text-[11px] space-y-3 mb-10 uppercase tracking-wider">
-                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-emerald-500"></span> 99.9% Uptime Guarantee</li>
-                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-emerald-500"></span> NVMe Storage Speed</li>
-                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-emerald-500"></span> Free Global CDN</li>
-                    </ul>
-                    <a href="#" class="text-white text-xs font-bold border-b border-emerald-600 pb-1 hover:text-emerald-500 transition">TEST RESULTS →</a>
-                </div>
-
-                <div class="feature-card p-10 text-left">
-                    <div class="mb-20">
-                        <span class="text-xs font-bold text-zinc-600 uppercase tracking-widest">03 / Creative Assets</span>
+                    <div class="text-left">
+                        <span class="text-[9px] font-bold text-emerald-500 uppercase tracking-widest mb-2 block">Infrastructure</span>
+                        <h3 class="text-lg text-white font-bold mb-2">Hostinger Cloud: Iraqi Latency Report</h3>
+                        <p class="text-sm text-slate-500 mb-4">Speed tests from Baghdad, Erbil, and Basra. Is it the right choice for local startups?</p>
+                        <a href="#" class="text-[10px] font-bold text-white uppercase border-b border-emerald-500">Read Report</a>
                     </div>
-                    <h4 class="text-2xl font-bold text-white mb-4">Canva Pro: AI Design</h4>
-                    <p class="text-sm leading-relaxed mb-8">From Magic Edit to automated brand kits. How Canva is replacing traditional design workflows for small teams.</p>
-                    <ul class="text-[11px] space-y-3 mb-10 uppercase tracking-wider">
-                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-purple-500"></span> AI Image Generation</li>
-                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-purple-500"></span> Video Automation</li>
-                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-purple-500"></span> Team Collaboration</li>
-                    </ul>
-                    <a href="#" class="text-white text-xs font-bold border-b border-purple-600 pb-1 hover:text-purple-500 transition">ACCESS GUIDE →</a>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="py-32 bg-white text-black px-8">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
-            <div class="md:w-1/2">
-                <h2 class="text-5xl font-bold tracking-tighter leading-none mb-6 text-left">Stay ahead of the <br> curve.</h2>
-                <p class="font-medium text-lg text-left">Weekly insights on hidden tech gems and stack updates delivered directly to your inbox.</p>
-            </div>
-            <div class="md:w-1/2 w-full">
-                <form class="flex gap-4">
-                    <input type="email" placeholder="email@example.com" class="flex-grow border-b-2 border-black py-4 outline-none text-xl">
-                    <button class="bg-black text-white px-10 py-4 font-bold uppercase tracking-widest text-xs hover:bg-zinc-800 transition">Subscribe</button>
-                </form>
+                <div class="flex flex-col md:flex-row gap-8 group">
+                    <div class="w-full md:w-48 h-32 rounded-2xl overflow-hidden flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition">
+                    </div>
+                    <div class="text-left">
+                        <span class="text-[9px] font-bold text-purple-500 uppercase tracking-widest mb-2 block">Design Systems</span>
+                        <h3 class="text-lg text-white font-bold mb-2">Canva Pro: The Automation Pivot</h3>
+                        <p class="text-sm text-slate-500 mb-4">How to use AI batch-processing to create a year of social content in 4 hours.</p>
+                        <a href="#" class="text-[10px] font-bold text-white uppercase border-b border-purple-500">Explore Guide</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </main>
 
-    <footer class="py-20 px-8 bg-[#050505] border-t border-white/5">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
-            <div class="max-w-xs">
-                <div class="text-white font-bold uppercase tracking-tighter text-lg mb-6 text-left">NextGen Stacks</div>
-                <p class="text-xs leading-loose text-left">A curated hub for professional digital infrastructure. We research, you build. 2026 Edition.</p>
-            </div>
-            <div class="grid grid-cols-2 gap-16">
-                <div>
-                    <h5 class="text-white font-bold text-[10px] uppercase tracking-[0.2em] mb-6 text-left">Navigation</h5>
-                    <ul class="text-xs space-y-4 text-left">
-                        <li><a href="#" class="hover:text-white">Directory</a></li>
-                        <li><a href="#" class="hover:text-white">Reviews</a></li>
-                        <li><a href="#" class="hover:text-white">Guides</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h5 class="text-white font-bold text-[10px] uppercase tracking-[0.2em] mb-6 text-left">Legal</h5>
-                    <ul class="text-xs space-y-4 text-left">
-                        <li><a href="#" class="hover:text-white">Affiliate Disclosure</a></li>
-                        <li><a href="#" class="hover:text-white">Privacy</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <footer class="py-20 border-t border-white/5 text-center">
+        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-slate-700 mb-4">Driven by Digital Excellence</p>
+        <p class="text-xs text-slate-600">© 2026 NextGenStacks. All Rights Reserved.</p>
     </footer>
 
 </body>
