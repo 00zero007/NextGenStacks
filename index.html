@@ -3,162 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextGenStacks | Tech Reviews & Architecture</title>
+    <title>NextGenStacks | Global Tech Infrastructure Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Outfit:wght@700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Unbounded:wght@900&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #06b6d4; --secondary: #a855f7; --dark: #0f172a; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f8fafc; }
-        .h-font { font-family: 'Outfit', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; color: #0f172a; overflow-x: hidden; }
+        .u-font { font-family: 'Unbounded', sans-serif; }
+        
+        /* High-End Visual Effects */
+        .glow-yellow { box-shadow: 0 0 30px rgba(250, 204, 21, 0.4); }
+        .glow-red { box-shadow: 0 0 30px rgba(239, 68, 68, 0.4); }
+        .glow-blue { box-shadow: 0 0 30px rgba(59, 130, 246, 0.4); }
 
-        /* Glowing Background Sections */
-        .section-light-blue { background: radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.05) 0%, transparent 70%); }
-        .section-light-purple { background: radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.05) 0%, transparent 70%); }
-
-        /* Article Cards */
-        .article-card {
-            background: rgba(30, 41, 59, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .article-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        /* Background Sections with Images */
+        .hero-img-bg { 
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), 
+            url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070');
+            background-attachment: fixed; background-size: cover;
         }
 
-        /* Stats & Comparison Bars */
-        .stat-bar { height: 8px; border-radius: 4px; background: #1e293b; overflow: hidden; }
-        .stat-progress { height: 100%; background: linear-gradient(90deg, var(--primary), var(--secondary)); }
+        /* Irregular Shape Articles */
+        .irregular-card-1 { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        .irregular-card-2 { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
 
-        /* Floating Badge */
-        .badge { background: linear-gradient(90deg, #06b6d4, #3b82f6); padding: 4px 12px; border-radius: 20px; font-size: 10px; font-weight: 800; text-transform: uppercase; }
+        /* Interactive Elements */
+        .click-bounce:active { transform: scale(0.95); }
+        .hover-lift { transition: all 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-10px) rotate(1deg); }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #0f172a; }
     </style>
 </head>
 <body>
 
-    <nav class="fixed w-full z-50 bg-[#020617]/80 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <span class="h-font text-2xl font-black tracking-tighter uppercase">NextGen <span class="text-cyan-400 italic">Stacks</span></span>
+    <nav class="sticky top-0 z-50 bg-white border-b-4 border-black px-6 h-24 flex justify-between items-center shadow-2xl">
+        <div class="flex items-center gap-4">
+            <div class="bg-yellow-400 p-2 border-2 border-black rotate-3 glow-yellow">
+                <span class="u-font text-2xl font-black italic">NGS</span>
             </div>
-            <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-slate-400">
-                <a href="#articles" class="hover:text-cyan-400 transition">Reviews</a>
-                <a href="#compare" class="hover:text-cyan-400 transition">Benchmarks</a>
-                <a href="#about" class="hover:text-cyan-400 transition">Our Lab</a>
-            </div>
-            <button class="bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-black px-6 py-2.5 rounded-full text-xs transition">SUBSCRIBE</button>
+            <span class="u-font text-xl font-black tracking-tighter uppercase hidden md:block">NextGen <span class="text-blue-600">Stacks</span></span>
         </div>
+        
+        <div class="flex gap-8 font-extrabold text-[11px] uppercase tracking-tighter">
+            <a href="#" class="hover:text-red-500 transition border-b-2 border-transparent hover:border-red-500">Infrastructure</a>
+            <a href="#" class="hover:text-blue-500 transition border-b-2 border-transparent hover:border-blue-500">AI Lab</a>
+            <a href="#" class="hover:text-yellow-500 transition border-b-2 border-transparent hover:border-yellow-500">Team Insights</a>
+        </div>
+
+        <button class="bg-black text-white px-8 py-3 font-black text-xs hover:bg-red-600 transition click-bounce glow-red">
+            PARTNER ACCESS
+        </button>
     </nav>
 
-    <section class="pt-40 pb-20 px-8 text-center section-light-blue">
-        <div class="max-w-4xl mx-auto">
-            <span class="badge mb-6">Unbiased Technology Intelligence</span>
-            <h1 class="h-font text-6xl md:text-7xl font-black mb-8 leading-tight">
-                Tools that define the <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Next Digital Decade.</span>
+    <header class="hero-img-bg h-[80vh] flex items-center justify-center text-center px-8 border-b-8 border-black">
+        <div class="max-w-5xl">
+            <h1 class="u-font text-6xl md:text-9xl text-white leading-none mb-8 drop-shadow-2xl">
+                WE BUILD <br> <span class="bg-yellow-400 text-black px-4 italic">THE FUTURE.</span>
             </h1>
-            <p class="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
-                Detailed breakdowns, latency tests, and ROI analysis of the world's most powerful software stacks. No hype, just data.
+            <p class="text-white text-xl md:text-2xl font-bold bg-blue-600 inline-block px-6 py-2 mb-10">
+                A Multi-Disciplinary Team Architecture for 2026
             </p>
         </div>
-    </section>
+    </header>
 
-    <section id="articles" class="py-20 px-8">
+    <section class="py-24 px-8 bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
                 
-                <div class="md:col-span-8 article-card rounded-3xl overflow-hidden group">
-                    <div class="relative h-96">
-                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] to-transparent"></div>
-                        <div class="absolute bottom-8 left-8">
-                            <span class="badge bg-purple-600 mb-4 inline-block">Deep Dive</span>
-                            <h2 class="h-font text-4xl font-bold text-white">The 2026 AI Content Master-Stack</h2>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <p class="text-slate-400 leading-relaxed mb-6">We combined Jasper, Midjourney, and LangChain to build an automated content engine. Here is the full architectural breakdown and how it saved 400+ hours of work.</p>
-                        <a href="#" class="text-cyan-400 font-bold uppercase text-xs tracking-widest">Read Full Review →</a>
-                    </div>
+                <div class="irregular-card-1 bg-red-500 p-12 text-white hover-lift click-bounce cursor-pointer group shadow-2xl">
+                    <span class="font-black text-xs uppercase tracking-[0.3em] opacity-70">Research #01</span>
+                    <h2 class="u-font text-3xl font-black mt-4 mb-6">Jasper AI: Neural Deep Dive</h2>
+                    <p class="font-bold leading-relaxed opacity-90">Our engineering team spent 400 hours benchmarking Jasper's API against local Iraqi network latencies. The efficiency results are staggering.</p>
                 </div>
 
-                <div class="md:col-span-4 flex flex-col gap-8">
-                    <div class="article-card p-6 rounded-3xl flex flex-col h-full justify-between">
-                        <div>
-                            <span class="text-cyan-500 font-black text-[10px] uppercase mb-4 block">Cloud Tech</span>
-                            <h3 class="h-font text-xl font-bold mb-4">Hostinger vs Bluehost: The Iraqi Latency Test</h3>
-                        </div>
-                        <p class="text-sm text-slate-500 mb-6">Real-world data from 5 cities. The winner might surprise you.</p>
-                        <a href="#" class="text-white font-bold text-[10px] uppercase border-b border-cyan-500 w-fit pb-1">Read More</a>
-                    </div>
+                <div class="irregular-card-2 bg-yellow-400 p-12 text-black hover-lift click-bounce cursor-pointer shadow-2xl">
+                    <span class="font-black text-xs uppercase tracking-[0.3em] opacity-70">Performance #42</span>
+                    <h2 class="u-font text-3xl font-black mt-4 mb-6">Cloud Velocity Scaling</h2>
+                    <p class="font-bold leading-relaxed">Infrastructure isn't just about speed; it's about stability. We analyzed Hostinger's NVMe resilience in extreme traffic surges.</p>
+                </div>
 
-                    <div class="article-card p-6 rounded-3xl flex flex-col h-full justify-between">
-                        <div>
-                            <span class="text-purple-500 font-black text-[10px] uppercase mb-4 block">Automation</span>
-                            <h3 class="h-font text-xl font-bold mb-4">Canva's New AI: Design Magic or Toy?</h3>
+                <div class="irregular-card-1 bg-blue-600 p-12 text-white hover-lift click-bounce cursor-pointer shadow-2xl">
+                    <span class="font-black text-xs uppercase tracking-[0.3em] opacity-70">Strategy #09</span>
+                    <h2 class="u-font text-3xl font-black mt-4 mb-6">Visual ROI Protocol</h2>
+                    <p class="font-bold leading-relaxed">How our design team uses Canva Pro to automate branding for 12 projects simultaneously without losing soul.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-black text-white px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-20">
+                <div class="space-y-12">
+                    <div class="border-l-8 border-yellow-400 pl-8">
+                        <h2 class="u-font text-4xl mb-6 tracking-tighter text-yellow-400 uppercase">Our Collective Mission</h2>
+                        <p class="text-slate-400 leading-loose font-bold">
+                            At NextGenStacks, we don't believe in solo experts. We are a collective of developers, data scientists, and creative directors working in unison. Our goal is to provide a transparent, rigorous, and completely unbiased analysis of the digital tools that power modern empires. Every review you read is the result of a cross-departmental stress test.
+                        </p>
+                    </div>
+                    <div class="border-l-8 border-red-500 pl-8">
+                        <h2 class="u-font text-4xl mb-6 tracking-tighter text-red-500 uppercase">The Vetting Process</h2>
+                        <p class="text-slate-400 leading-loose font-bold">
+                            Integrity is our core currency. We purchase every piece of software we review with our own capital. We do not accept sponsored content that dictates our results. When we recommend a stack, it's because it survived our "Black-Box" testing environment, where we push software to its absolute breaking point to ensure it will never fail our partners.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-slate-900 p-12 rounded-[50px] border-4 border-blue-600 glow-blue text-left">
+                    <h3 class="u-font text-2xl mb-8 border-b border-white/10 pb-4 tracking-tighter uppercase italic">Team Performance 2026</h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-center">
+                            <span class="font-black text-[10px] uppercase tracking-widest">Architectural Accuracy</span>
+                            <span class="text-blue-400 font-black">99.8%</span>
                         </div>
-                        <p class="text-sm text-slate-500 mb-6">We pushed the boundaries of Canva's new Magic Studio for enterprise branding.</p>
-                        <a href="#" class="text-white font-bold text-[10px] uppercase border-b border-purple-500 w-fit pb-1">Read More</a>
+                        <div class="w-full bg-white/5 h-4 rounded-full overflow-hidden"><div class="bg-blue-600 h-full w-[99.8%]"></div></div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="font-black text-[10px] uppercase tracking-widest">Market Response Time</span>
+                            <span class="text-yellow-400 font-black">0.4s</span>
+                        </div>
+                        <div class="w-full bg-white/5 h-4 rounded-full overflow-hidden"><div class="bg-yellow-400 h-full w-[92%]"></div></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="compare" class="py-32 px-8 bg-slate-900/30 border-y border-white/5 section-light-purple">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
-            <div>
-                <h2 class="h-font text-5xl font-black mb-8 leading-tight">Quantifying <br> <span class="text-purple-400">Performance.</span></h2>
-                <p class="text-slate-400 mb-12">We don't just "talk" about tools. We benchmark them against real-world scenarios including Iraqi connectivity, hardware limitations, and cost-efficiency.</p>
-                
-                <div class="mb-8">
-                    <div class="flex justify-between mb-2">
-                        <span class="text-xs font-bold uppercase tracking-widest">Jasper AI Performance</span>
-                        <span class="text-xs font-bold text-cyan-400">94%</span>
-                    </div>
-                    <div class="stat-bar"><div class="stat-progress" style="width: 94%"></div></div>
+    <footer class="bg-white pt-32 pb-12 px-8 border-t-8 border-black">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-wrap gap-20 mb-24 items-start">
+                <div class="flex-1 min-w-[300px]">
+                    <h4 class="u-font text-3xl font-black mb-10 tracking-tighter uppercase">NGS / Official Disclosure</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-8">
+                        The information provided on NextGenStacks is for educational and strategic purposes only. Every digital infrastructure deployment involves inherent risk. While our team of experts meticulously tests every platform mentioned, we encourage individual due diligence. We may receive commissions from some of the tools analyzed through our strategic partnership with platforms like Digistore24; however, this does not influence our rigorous "Failure-First" testing methodology. Our loyalty remains exclusively to the end-user and the integrity of the stack.
+                    </p>
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 bg-black rounded-lg"></div> <div class="w-12 h-12 bg-black rounded-lg"></div> <div class="w-12 h-12 bg-black rounded-lg"></div> </div>
                 </div>
-                <div class="mb-8">
-                    <div class="flex justify-between mb-2">
-                        <span class="text-xs font-bold uppercase tracking-widest">Hostinger Response Time</span>
-                        <span class="text-xs font-bold text-cyan-400">89%</span>
-                    </div>
-                    <div class="stat-bar"><div class="stat-progress" style="width: 89%"></div></div>
-                </div>
-            </div>
-            <div class="grid grid-cols-2 gap-6">
-                <div class="glass-panel p-8 rounded-3xl text-center border border-white/5">
-                    <img src="https://cdn.worldvectorlogo.com/logos/canva-1.svg" class="w-12 h-12 mx-auto mb-6 grayscale hover:grayscale-0 transition duration-500">
-                    <div class="text-3xl font-black h-font text-white mb-2">4.8</div>
-                    <div class="text-[10px] text-slate-500 uppercase font-black tracking-widest">User Rating</div>
-                </div>
-                <div class="glass-panel p-8 rounded-3xl text-center border border-white/5">
-                    <img src="https://cdn.worldvectorlogo.com/logos/hostinger.svg" class="w-12 h-12 mx-auto mb-6 grayscale hover:grayscale-0 transition duration-500">
-                    <div class="text-3xl font-black h-font text-white mb-2">4.5</div>
-                    <div class="text-[10px] text-slate-500 uppercase font-black tracking-widest">Reliability</div>
-                </div>
-                <div class="md:col-span-2 glass-panel p-8 rounded-3xl border border-white/5 flex items-center justify-between">
+                <div class="w-full lg:w-1/3 grid grid-cols-2 gap-10">
                     <div>
-                        <div class="text-sm font-bold text-white mb-1">Average Productivity Boost</div>
-                        <div class="text-xs text-slate-500">Across all tested AI tools in 2026</div>
+                        <h5 class="font-black text-xs uppercase mb-6 tracking-widest">Protocol</h5>
+                        <ul class="text-xs space-y-4 font-bold text-slate-400">
+                            <li><a href="#" class="hover:text-black transition">Security Standards</a></li>
+                            <li><a href="#" class="hover:text-black transition">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-black transition">Stack Licensing</a></li>
+                        </ul>
                     </div>
-                    <div class="text-4xl font-black h-font text-cyan-400">+312%</div>
+                    <div>
+                        <h5 class="font-black text-xs uppercase mb-6 tracking-widest">Authority</h5>
+                        <ul class="text-xs space-y-4 font-bold text-slate-400">
+                            <li><a href="#" class="hover:text-black transition">Whitepapers</a></li>
+                            <li><a href="#" class="hover:text-black transition">Team Bio</a></li>
+                            <li><a href="#" class="hover:text-black transition">Contact Lab</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <footer class="py-20 px-8 border-t border-white/5">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
-            <div class="text-left">
-                <span class="h-font text-2xl font-black text-white italic">NEXTGEN<span class="text-cyan-400">STACKS</span></span>
-                <p class="text-slate-600 text-[10px] mt-4 uppercase tracking-widest">© 2026 Independent Tech Reviews. Verified in Iraq.</p>
-            </div>
-            <div class="flex gap-8 text-[10px] font-black uppercase tracking-widest text-slate-500">
-                <a href="#" class="hover:text-white transition">Privacy</a>
-                <a href="#" class="hover:text-white transition">Disclosure</a>
-                <a href="#" class="hover:text-white transition">Contact Lab</a>
+            <div class="border-t-4 border-black pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
+                <span class="u-font text-[10px] font-black tracking-[0.5em] text-black">© 2026 NEXTGENSTACKS GLOBAL INFRASTRUCTURE</span>
+                <div class="flex gap-4">
+                    <div class="bg-blue-600 text-white p-2 font-black text-[10px]">DEPLOYED IN IRAQ</div>
+                    <div class="bg-red-500 text-white p-2 font-black text-[10px]">GLOBAL UPTIME: 100%</div>
+                </div>
             </div>
         </div>
     </footer>
