@@ -3,155 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextGenStacks | Premium Tech Infrastructure</title>
+    <title>NextGenStacks | Neural Infrastructure</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Orbitron:wght@600;900&display=swap" rel="stylesheet">
     <style>
-        :root { --accent: #3b82f6; --dark-bg: #05070a; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--dark-bg); color: #e2e8f0; overflow-x: hidden; }
-        .h-font { font-family: 'Space Grotesk', sans-serif; }
+        :root { --blue: #3b82f6; --purple: #a855f7; --emerald: #10b981; --bg: #030712; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); color: #fff; overflow-x: hidden; }
+        .cyber-font { font-family: 'Orbitron', sans-serif; }
 
-        /* Cinematic Background */
-        .aura-bg {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
-            background: radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 40%),
-                        radial-gradient(circle at 80% 70%, rgba(99, 102, 241, 0.08) 0%, transparent 40%);
+        /* Background Noise & Glow */
+        .cyber-bg {
+            position: fixed; inset: 0; z-index: -1;
+            background: 
+                radial-gradient(circle at 10% 10%, rgba(59, 130, 246, 0.15), transparent 40%),
+                radial-gradient(circle at 90% 90%, rgba(168, 85, 247, 0.15), transparent 40%),
+                url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+            opacity: 0.8;
         }
 
-        /* 3D Glass Effect */
-        .glass-panel {
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .glass-panel:hover {
-            transform: translateY(-8px) scale(1.01);
-            border-color: var(--accent);
-            box-shadow: 0 30px 60px rgba(59, 130, 246, 0.15);
-        }
-
-        /* Neumorphic 3D Button */
-        .btn-3d {
-            background: linear-gradient(145deg, #2563eb, #1d4ed8);
-            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3), inset 0 2px 2px rgba(255, 255, 255, 0.2);
+        /* 3D Glass Morphism with High Glow */
+        .neon-card {
+            background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.2s ease;
+            backdrop-filter: blur(15px);
+            transition: all 0.4s ease;
+            position: relative; overflow: hidden;
         }
-        .btn-3d:active { transform: translateY(2px); box-shadow: 0 5px 10px rgba(37, 99, 235, 0.2); }
+        .neon-card:hover {
+            border-color: var(--blue);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+            transform: scale(1.02) translateY(-5px);
+        }
 
-        /* Floating Animation */
-        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
-        .float-img { animation: float 6s ease-in-out infinite; }
-        
-        .img-overlay { mix-blend-mode: overlay; opacity: 0.4; }
+        /* Animated Bar Chart Mini-Components */
+        .bar { height: 4px; border-radius: 2px; background: var(--blue); transition: width 1s ease-in-out; }
+        .group:hover .bar { filter: brightness(1.5); }
+
+        .glitch-text:hover {
+            text-shadow: 2px 0 var(--blue), -2px 0 var(--purple);
+            animation: glitch 0.3s infinite;
+        }
+        @keyframes glitch { 0% { transform: translate(0); } 20% { transform: translate(-2px, 2px); } 40% { transform: translate(-2px, -2px); } 60% { transform: translate(2px, 2px); } 80% { transform: translate(2px, -2px); } 100% { transform: translate(0); } }
     </style>
 </head>
 <body>
 
-    <div class="aura-bg"></div>
+    <div class="cyber-bg"></div>
 
     <nav class="fixed w-full z-50 p-6">
-        <div class="max-w-7xl mx-auto glass-panel rounded-3xl px-8 h-20 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center shadow-xl shadow-blue-900/40">
-                    <span class="text-white font-black text-2xl h-font italic">N</span>
+        <div class="max-w-7xl mx-auto neon-card rounded-2xl px-10 h-20 flex justify-between items-center border-white/20">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg shadow-[0_0_20px_rgba(59,130,246,0.5)] flex items-center justify-center">
+                    <span class="cyber-font text-2xl font-black">N</span>
                 </div>
-                <div class="flex flex-col">
-                    <span class="font-black text-lg tracking-tighter leading-none text-white uppercase italic">NextGen<span class="text-blue-500">Stacks</span></span>
-                    <span class="text-[8px] tracking-[0.3em] font-bold text-slate-500 uppercase">Tech Authority</span>
-                </div>
+                <span class="cyber-font text-xl font-black tracking-widest uppercase">NextGen<span class="text-blue-500">Stacks</span></span>
             </div>
-            <div class="hidden lg:flex gap-12 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
-                <a href="#marketplace" class="hover:text-white transition">Marketplace</a>
-                <a href="#lab" class="hover:text-white transition">The Lab</a>
-                <a href="#vision" class="hover:text-white transition">Vision</a>
+            <div class="hidden md:flex gap-8 text-[10px] font-bold tracking-[0.3em] uppercase opacity-70">
+                <a href="#" class="hover:text-blue-400">Infrastructures</a>
+                <a href="#" class="hover:text-purple-400">Benchmarks</a>
+                <a href="#" class="hover:text-emerald-400">Affiliate Port</a>
             </div>
-            <button class="btn-3d text-white text-[10px] font-extrabold px-8 py-3.5 rounded-xl uppercase tracking-widest">Connect ID</button>
+            <button class="bg-white text-black text-[10px] font-black px-8 py-3 rounded-full hover:bg-blue-500 hover:text-white transition">ACCESS CORE</button>
         </div>
     </nav>
 
-    <section class="relative pt-64 pb-32 px-8">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-7 text-left">
-                <div class="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-black uppercase tracking-[0.3em] mb-8">
-                    Autonomous Infrastructure 2026
-                </div>
-                <h1 class="h-font text-7xl md:text-[100px] font-black leading-[0.9] text-white tracking-tighter mb-10">
-                    Scale <br> <span class="bg-gradient-to-r from-blue-500 to-indigo-400 bg-clip-text text-transparent italic">Infinite.</span>
+    <section class="pt-52 pb-20 px-8">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20">
+            <div class="text-left">
+                <h1 class="cyber-font text-7xl md:text-9xl font-black leading-none mb-10 glitch-text">
+                    NEURAL <br> <span class="bg-gradient-to-r from-blue-400 via-purple-500 to-emerald-400 bg-clip-text text-transparent italic">WEALTH.</span>
                 </h1>
-                <p class="text-xl text-slate-400 max-w-xl leading-relaxed mb-12 border-l-2 border-white/10 pl-8">
-                    We bridge the gap between complex software and your digital success. Detailed reviews, stress-tests, and architectural guides.
-                </p>
-                <div class="flex flex-wrap gap-6">
-                    <a href="#marketplace" class="btn-3d px-12 py-5 rounded-2xl font-black text-xs uppercase tracking-widest text-white">Deploy First Stack</a>
-                    <button class="glass-panel px-12 py-5 rounded-2xl font-black text-xs uppercase tracking-widest text-white border-white/5">View Metrics</button>
+                <div class="grid grid-cols-2 gap-6 mb-12">
+                    <div class="neon-card p-6 rounded-2xl border-l-4 border-blue-500">
+                        <span class="block text-3xl font-black cyber-font mb-2">99.9%</span>
+                        <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Efficiency Rate</span>
+                    </div>
+                    <div class="neon-card p-6 rounded-2xl border-l-4 border-purple-500">
+                        <span class="block text-3xl font-black cyber-font mb-2">14.2x</span>
+                        <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Avg. ROI Boost</span>
+                    </div>
                 </div>
             </div>
-            <div class="lg:col-span-5 relative">
-                <div class="absolute -inset-10 bg-blue-500/10 blur-[100px] rounded-full"></div>
-                <div class="relative glass-panel p-4 rounded-[40px] transform hover:rotate-3 transition duration-700">
-                    <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1200" class="rounded-[30px] shadow-2xl float-img" alt="Digital Asset">
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1620712943543-bcc4628c6757?auto=format&fit=crop&q=80&w=1200" class="rounded-[40px] shadow-2xl border border-white/10 grayscale hover:grayscale-0 transition duration-1000">
+                <div class="absolute -bottom-10 -left-10 neon-card p-8 rounded-3xl w-64 hidden md:block border-emerald-500/30">
+                    <p class="text-[10px] font-black uppercase text-emerald-400 mb-4 tracking-tighter">Real-time Performance</p>
+                    <div class="space-y-3">
+                        <div class="w-full h-1 bg-white/10 rounded overflow-hidden"><div class="bar w-[85%]"></div></div>
+                        <div class="w-full h-1 bg-white/10 rounded overflow-hidden"><div class="bar w-[40%] bg-purple-500"></div></div>
+                        <div class="w-full h-1 bg-white/10 rounded overflow-hidden"><div class="bar w-[95%] bg-emerald-500"></div></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="marketplace" class="py-32 px-8 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-24 flex flex-col md:flex-row justify-between items-end gap-6">
-                <div class="text-left">
-                    <h2 class="h-font text-4xl font-black uppercase text-white tracking-tighter">Verified Solutions</h2>
-                    <p class="text-slate-500 italic mt-2">Only the best-in-class tools, vetted by our engineers.</p>
+    <section class="py-20 px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="md:col-span-2 neon-card rounded-[40px] p-12 flex flex-col justify-end min-h-[500px] relative">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200" class="absolute inset-0 w-full h-full object-cover opacity-20 hover:opacity-40 transition">
+                <div class="relative z-10">
+                    <span class="text-blue-500 font-black tracking-widest text-xs uppercase mb-4 block">Core Infrastructure</span>
+                    <h2 class="text-5xl font-black cyber-font mb-6 leading-tight">Mastering the <br> AI Deployment Scale</h2>
+                    <p class="text-slate-400 max-w-lg mb-10 leading-relaxed">We break down the technical barriers of entry. Every stack is tested against global latency and neural throughput standards.</p>
+                    <button class="btn-3d bg-blue-600 px-10 py-4 rounded-xl font-black text-xs uppercase tracking-widest">Read Intelligence Report</button>
                 </div>
-                <div class="h-px bg-white/5 flex-grow mx-12 hidden md:block"></div>
-                <div class="flex gap-4">
-                    <span class="text-[10px] font-bold text-blue-500 border border-blue-500/30 px-4 py-1 rounded-full uppercase">Software</span>
-                    <span class="text-[10px] font-bold text-slate-600 border border-white/5 px-4 py-1 rounded-full uppercase">Hosting</span>
+            </div>
+
+            <div class="space-y-6">
+                <div class="neon-card rounded-[40px] p-8 h-1/2 bg-gradient-to-br from-purple-900/20 to-transparent">
+                    <h3 class="text-xl font-black mb-4 uppercase italic">Cloud Mining</h3>
+                    <p class="text-xs text-slate-500 mb-6 leading-loose">Optimizing server-side rendering for heavy AI applications. A 30% reduction in costs verified.</p>
+                    <div class="h-12 w-full bg-white/5 rounded-xl border border-white/10 flex items-center justify-center">
+                        <span class="text-[10px] font-black text-purple-400 uppercase tracking-widest">Active Benchmarks</span>
+                    </div>
+                </div>
+                <div class="neon-card rounded-[40px] p-8 h-1/2 border-emerald-500/20">
+                    <h3 class="text-xl font-black mb-4 uppercase italic">Data Liquidity</h3>
+                    <p class="text-xs text-slate-500 mb-6 leading-loose">How high-speed hosting influences your SEO rankings in the age of AI search engines.</p>
+                    <div class="flex -space-x-3">
+                        <div class="w-8 h-8 rounded-full bg-blue-500 border-2 border-bg"></div>
+                        <div class="w-8 h-8 rounded-full bg-purple-500 border-2 border-bg"></div>
+                        <div class="w-8 h-8 rounded-full bg-emerald-500 border-2 border-bg"></div>
+                        <div class="w-8 h-8 rounded-full bg-slate-700 border-2 border-bg flex items-center justify-center text-[8px] font-bold">+12</div>
+                    </div>
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="glass-panel p-10 rounded-[40px] group">
-                    <div class="w-16 h-16 bg-blue-600/10 rounded-2xl flex items-center justify-center mb-10 border border-blue-500/20 shadow-inner">
-                        <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h3 class="h-font text-2xl font-black mb-6 text-white group-hover:text-blue-400 transition">Jasper AI Engine</h3>
-                    <p class="text-sm text-slate-500 leading-loose mb-10">Full architectural analysis of the world's leading AI content platform. 14x ROI potential verified.</p>
-                    <a href="#" class="btn-3d block text-center py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest text-white opacity-0 group-hover:opacity-100 transition-all duration-500">Deploy Now →</a>
-                </div>
-
-                <div class="glass-panel p-10 rounded-[40px] group">
-                    <div class="w-16 h-16 bg-emerald-600/10 rounded-2xl flex items-center justify-center mb-10 border border-emerald-500/20 shadow-inner">
-                        <svg class="w-8 h-8 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                    </div>
-                    <h3 class="h-font text-2xl font-black mb-6 text-white group-hover:text-emerald-400 transition">Cloud Infrastructure</h3>
-                    <p class="text-sm text-slate-500 leading-loose mb-10">High-performance hosting for high-traffic networks. Latency-optimized for global deployment.</p>
-                    <a href="#" class="btn-3d block text-center py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest text-white opacity-0 group-hover:opacity-100 transition-all duration-500">Deploy Now →</a>
-                </div>
-
-                <div class="glass-panel p-10 rounded-[40px] group">
-                    <div class="w-16 h-16 bg-purple-600/10 rounded-2xl flex items-center justify-center mb-10 border border-purple-500/20 shadow-inner">
-                        <svg class="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                    </div>
-                    <h3 class="h-font text-2xl font-black mb-6 text-white group-hover:text-purple-400 transition">Design Automation</h3>
-                    <p class="text-sm text-slate-500 leading-loose mb-10">Unlocking Canva's AI Studio for rapid brand scaling. Create years of content in minutes.</p>
-                    <a href="#" class="btn-3d block text-center py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest text-white opacity-0 group-hover:opacity-100 transition-all duration-500">Deploy Now →</a>
-                </div>
-            </div>
         </div>
     </section>
 
-    <footer class="py-20 text-center border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-8">
-            <h4 class="h-font font-black text-2xl italic mb-6">NEXTGEN<span class="text-blue-500">STACKS</span></h4>
-            <p class="text-slate-600 text-[10px] uppercase tracking-[0.6em] font-black mb-10">The Independent Digital Infrastructure Authority</p>
-            <div class="flex flex-wrap justify-center gap-10 text-[10px] font-black text-slate-500">
-                <a href="#" class="hover:text-white transition">Privacy Protocol</a>
-                <a href="#" class="hover:text-white transition">Terms of Service</a>
-                <a href="#" class="hover:text-white transition">Disclosure</a>
-            </div>
+    <section class="py-20 px-8 text-center bg-white/5 border-y border-white/5">
+        <h2 class="cyber-font text-5xl font-black mb-8 italic">READY TO SYNC?</h2>
+        <p class="text-slate-500 text-xs uppercase tracking-[0.5em] mb-12">Connect your infrastructure to the NextGen network today.</p>
+        <div class="flex justify-center gap-4">
+             <div class="h-1 w-20 bg-blue-600"></div>
+             <div class="h-1 w-20 bg-purple-600"></div>
+             <div class="h-1 w-20 bg-emerald-600"></div>
+        </div>
+    </section>
+
+    <footer class="py-20 px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center opacity-50">
+            <span class="text-[10px] font-black uppercase tracking-widest">NextGenStacks // Neural Authority</span>
+            <span class="text-[10px] uppercase mt-4 md:mt-0">© 2026 Integrated Global Systems</span>
         </div>
     </footer>
 
