@@ -1,0 +1,34 @@
+/* الروابط الأساسية والخطوط */
+:root {
+    --primary-blue: #3b82f6;
+    --neo-black: #000000;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.u-font {
+    font-family: 'Unbounded', sans-serif;
+}
+
+/* تأثير الرفع النيومورفي المشترك */
+.hover-lift {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hover-lift:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 10px 10px 0px 0px var(--neo-black);
+}
+
+/* تنسيق القائمة العلوية المشترك */
+nav a {
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--primary-blue);
+    text-decoration: underline;
+}

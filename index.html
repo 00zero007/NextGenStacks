@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGenStacks | Evidence-First Tool Reviews</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Unbounded:wght@900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; color: #0f172a; overflow-x: hidden; scroll-behavior: smooth; }
+        .u-font { font-family: 'Unbounded', sans-serif; }
+        
+        /* Cinematic Hero Background */
+        .hero-img-bg { 
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(15, 23, 42, 0.5)), 
+            url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072');
+            background-attachment: fixed; background-size: cover; background-position: center;
+        }
+
+        /* Powerful Reveal Animations */
+        @keyframes revealText {
+            0% { opacity: 0; transform: translateY(40px); filter: blur(10px); }
+            100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+        }
+        .anim-1 { animation: revealText 1s ease-out forwards; }
+        .anim-2 { animation: revealText 1s ease-out 0.4s forwards; opacity: 0; }
+        .anim-3 { animation: revealText 1s ease-out 0.8s forwards; opacity: 0; }
+
+        /* Irregular Shape Articles */
+        .irregular-card-1 { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        .irregular-card-2 { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+
+        /* Visual Accents */
+        .gradient-text { background: linear-gradient(90deg, #fbbf24, #ef4444, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glow-blue { box-shadow: 0 0 30px rgba(59, 130, 246, 0.4); }
+        .click-bounce:active { transform: scale(0.95); }
+        .hover-lift { transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .hover-lift:hover { transform: translateY(-10px) rotate(1deg); }
+    </style>
+</head>
+<body>
+
+  <nav class="flex gap-8 font-black text-xs uppercase tracking-widest">
+    <a href="index.html" class="hover:text-blue-600">Home</a>
+    <a href="reviews.html" class="hover:text-blue-600">Reviews</a>
+    <a href="lab-reports.html" class="hover:text-blue-600">Lab Reports</a>
+    <a href="mission.html" class="hover:text-blue-600">Our Mission</a>
+</nav>
+
+    <header class="hero-img-bg h-screen flex items-center justify-center text-center px-8 border-b-8 border-black">
+        <div class="max-w-4xl z-10">
+            <div class="anim-1 mb-6">
+                <span class="bg-blue-600 text-white text-[10px] font-black px-4 py-2 tracking-[0.5em] uppercase">Evidence-First Tool Reviews</span>
+            </div>
+            <h1 class="u-font text-5xl md:text-[85px] text-white leading-[1] mb-8 drop-shadow-2xl anim-2">
+                BUILD <span class="gradient-text">SMARTER</span> <br> DIGITAL STACKS
+            </h1>
+            <div class="anim-3">
+                <p class="text-slate-200 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed mb-12 bg-black/40 p-4 border-l-4 border-yellow-400">
+                    NextGenStacks is a high-performance editorial lab reviewing digital tools. We highlight the wins, list the tradeoffs, and help you choose what earns your time.
+                </p>
+                <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                    <a href="#partner-tools" class="bg-yellow-400 text-black px-12 py-4 u-font text-xs font-black border-2 border-black hover:scale-105 transition-all click-bounce">EXPLORE THE TOOL INDEX</a>
+                    <a href="#comparisons" class="border-2 border-white text-white px-12 py-4 u-font text-xs font-black hover:bg-white hover:text-black transition-all">VIEW REVIEW STANDARDS</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="reviews" class="py-24 px-8 bg-white border-b-8 border-black">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-end justify-between mb-12">
+                <div>
+                    <span class="font-black text-xs uppercase tracking-[0.3em] text-slate-400">Editorial Highlights</span>
+                    <h2 class="u-font text-4xl md:text-5xl font-black mt-4">Long-Form Reviews</h2>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="irregular-card-1 bg-red-500 p-12 text-white hover-lift shadow-2xl">
+                    <h2 class="u-font text-2xl font-black mb-6">AI Writing Platforms</h2>
+                    <p class="font-bold opacity-90 italic">Signal vs. Hype: A long-form breakdown of workflow fit and output quality.</p>
+                </div>
+                <div class="irregular-card-2 bg-yellow-400 p-12 text-black hover-lift shadow-2xl">
+                    <h2 class="u-font text-2xl font-black mb-6">Productivity Suites</h2>
+                    <p class="font-bold opacity-90 italic">Under Pressure: Where task managers shine and where they break.</p>
+                </div>
+                <div class="irregular-card-1 bg-blue-600 p-12 text-white hover-lift shadow-2xl">
+                    <h2 class="u-font text-2xl font-black mb-6">Design Tools</h2>
+                    <p class="font-bold opacity-90 italic">Creator Scale: Scoring templates, export quality, and brand durability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="partner-tools" class="py-24 px-8 bg-slate-50 border-b-8 border-black">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16">
+                <span class="bg-black text-white px-4 py-1 text-[10px] font-black uppercase tracking-[0.3em]">Marketplace</span>
+                <h2 class="u-font text-4xl md:text-6xl font-black mt-6 uppercase">Vetted Partner Tools</h2>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-10">
+                <div class="border-4 border-black p-8 bg-white shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover-lift">
+                    <span class="text-[10px] font-black uppercase tracking-widest text-red-500">Launch Series</span>
+                    <h3 class="u-font text-2xl font-black mt-4 uppercase">Webclass: Wealth & Growth</h3>
+                    <p class="mt-4 text-slate-600 font-bold leading-relaxed">Focus: Monetization training funnel. We’re evaluating lesson depth and realistic outcomes for beginners.</p>
+                    <a href="https://millionairepartnership.com/webclass-d24#aff=nextgenofficialhubc519" target="_blank" class="inline-block mt-8 bg-blue-600 text-white px-8 py-3 text-xs font-black hover:bg-black transition uppercase">Verify Partner Page →</a>
+                </div>
+
+                <div class="border-4 border-black p-8 bg-white shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover-lift">
+                    <span class="text-[10px] font-black uppercase tracking-widest text-blue-500">Ecommerce Ops</span>
+                    <h3 class="u-font text-2xl font-black mt-4 uppercase">Checkout DS24 Workflow</h3>
+                    <p class="mt-4 text-slate-600 font-bold leading-relaxed">Focus: Digistore24 onboarding. Mapping the time-to-value for new affiliate users.</p>
+                    <a href="https://www.checkout-ds24.com/redir/611936/nextgenofficialhubc519/" target="_blank" class="inline-block mt-8 bg-blue-600 text-white px-8 py-3 text-xs font-black hover:bg-black transition uppercase">Verify Partner Page →</a>
+                </div>
+
+                <div class="border-4 border-black p-8 bg-white shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover-lift">
+                    <span class="text-[10px] font-black uppercase tracking-widest text-yellow-600">Creator Systems</span>
+                    <h3 class="u-font text-2xl font-black mt-4 uppercase">Content Creator Clone</h3>
+                    <p class="mt-4 text-slate-600 font-bold leading-relaxed">Focus: Workflow acceleration. Checking clarity, support, and scalability for solo creators.</p>
+                    <a href="https://contentcreatorclone.com/digistore?voucher=CCC-Rabatt#aff=nextgenofficialhubc519" target="_blank" class="inline-block mt-8 bg-blue-600 text-white px-8 py-3 text-xs font-black hover:bg-black transition uppercase">Verify Partner Page →</a>
+                </div>
+
+                <div class="border-4 border-black p-8 bg-white shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover-lift">
+                    <span class="text-[10px] font-black uppercase tracking-widest text-purple-500">Growth Strategy</span>
+                    <h3 class="u-font text-2xl font-black mt-4 uppercase">Strategic Offer #568935</h3>
+                    <p class="mt-4 text-slate-600 font-bold leading-relaxed">Focus: High-yield growth offer. Validating onboarding steps and realistic expectations.</p>
+                    <a href="https://www.digistore24.com/redir/568935/nextgenofficialhubc519/" target="_blank" class="inline-block mt-8 bg-blue-600 text-white px-8 py-3 text-xs font-black hover:bg-black transition uppercase">Verify Partner Page →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white pt-32 pb-12 px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-20">
+            <div class="flex-1">
+                <h4 class="u-font text-2xl font-black mb-10 text-yellow-400">OFFICIAL DISCLOSURE</h4>
+                <p class="text-sm text-slate-400 leading-relaxed font-bold">
+                    NextGenStacks is an independent editorial lab. While we use affiliate links (Digistore24) to fund our research, our "Evidence-First" methodology ensures unbiased verdicts. Your trust is our only asset.
+                </p>
+            </div>
+            <div class="flex gap-10">
+                <div class="w-12 h-12 bg-white/10 rounded"></div>
+                <div class="w-12 h-12 bg-white/10 rounded"></div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-white/10 mt-20 pt-10 text-[9px] font-black opacity-40 tracking-[0.5em] uppercase text-center">
+            © 2026 NEXTGENSTACKS GLOBAL | DEPLOYED IN IRAQ
+        </div>
+    </footer>
+
+</body>
+</html>
