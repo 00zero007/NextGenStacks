@@ -40,11 +40,17 @@
 </head>
 <body>
 
-  <nav class="flex gap-8 font-black text-xs uppercase tracking-widest">
-    <a href="index.html" class="hover:text-blue-600">Home</a>
-    <a href="reviews.html" class="hover:text-blue-600">Reviews</a>
-    <a href="lab-reports.html" class="hover:text-blue-600">Lab Reports</a>
-    <a href="mission.html" class="hover:text-blue-600">Our Mission</a>
+<nav class="border-b-8 border-black p-8 flex flex-col md:flex-row justify-between items-center bg-white sticky top-0 z-50">
+    <div class="flex items-center gap-4">
+        <div class="bg-black text-white p-2 u-font font-black text-2xl rotate-[-3deg]">NGS</div>
+        <a href="index.html" class="u-font font-black text-3xl tracking-tighter hover:italic">NEXTGEN<span class="text-blue-600">STACKS</span></a>
+    </div>
+    <div class="flex gap-10 font-black text-xs uppercase tracking-[0.2em] mt-6 md:mt-0">
+        <a href="index.html" class="border-b-4 border-transparent hover:border-blue-600 transition-all">Intelligence</a>
+        <a href="reviews.html" class="border-b-4 border-transparent hover:border-yellow-400 transition-all">The Archive</a>
+        <a href="lab-reports.html" class="border-b-4 border-transparent hover:border-red-600 transition-all">Lab Reports</a>
+        <a href="mission.html" class="border-b-4 border-blue-600">Our Manifesto</a>
+    </div>
 </nav>
 
     <header class="hero-img-bg h-screen flex items-center justify-center text-center px-8 border-b-8 border-black">
