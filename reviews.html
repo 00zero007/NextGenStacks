@@ -11,69 +11,69 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f0f0f0; }
         .u-font { font-family: 'Unbounded', sans-serif; }
         .mono { font-family: 'Space Mono', monospace; }
+        .archive-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
         .archive-card:hover { transform: translate(-8px, -8px); box-shadow: 16px 16px 0px 0px rgba(0,0,0,1); }
+        .claude-card:hover { box-shadow: 16px 16px 0px 0px rgba(59,130,246,1); }
     </style>
 </head>
 <body class="p-4 md:p-8">
 
-    <header class="max-w-7xl mx-auto mb-20 flex justify-between items-end border-b-8 border-black pb-8">
+    <header class="max-w-7xl mx-auto mb-20 flex flex-col md:flex-row justify-between items-start md:items-end border-b-8 border-black pb-8 gap-6">
         <div>
             <span class="mono text-sm font-black uppercase tracking-widest text-blue-600">// Database_Access_Granted</span>
-            <h1 class="u-font text-5xl md:text-8xl font-black uppercase mt-2">The<br>Archive</h1>
+            <h1 class="u-font text-5xl md:text-8xl font-black uppercase mt-2 leading-none">The<br>Archive</h1>
         </div>
-        <a href="index.html" class="bg-black text-white px-6 py-3 u-font text-xs uppercase hover:bg-yellow-400 hover:text-black transition-all mb-2">Back to Lab</a>
+        <a href="index.html" class="bg-black text-white px-8 py-4 u-font text-xs uppercase hover:bg-yellow-400 hover:text-black transition-all border-4 border-black">Back to Lab</a>
     </header>
 
-    <div class="max-w-7xl mx-auto mb-12 flex flex-wrap gap-4">
-        <button class="bg-black text-white px-4 py-2 font-black text-xs uppercase border-4 border-black">All Reports</button>
-        <button class="bg-white text-black px-4 py-2 font-black text-xs uppercase border-4 border-black hover:bg-blue-600 hover:text-white">AI Content</button>
-        <button class="bg-white text-black px-4 py-2 font-black text-xs uppercase border-4 border-black hover:bg-blue-600 hover:text-white">Workflow Automation</button>
+    <div class="max-w-7xl mx-auto mb-16 flex flex-wrap gap-4">
+        <button class="bg-black text-white px-6 py-2 font-black text-xs uppercase border-4 border-black">All Reports</button>
+        <button class="bg-white text-black px-6 py-2 font-black text-xs uppercase border-4 border-black hover:bg-blue-600 hover:text-white transition-colors">AI Content</button>
+        <button class="bg-white text-black px-6 py-2 font-black text-xs uppercase border-4 border-black hover:bg-blue-600 hover:text-white transition-colors">Workflow Automation</button>
     </div>
 
-    <main class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <main class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-10 items-stretch">
         
-        <div class="archive-card bg-white border-8 border-black p-6 transition-all shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between">
-            <div>
-                <div class="flex justify-between items-start mb-6">
-                    <span class="bg-blue-600 text-white px-2 py-1 text-[10px] font-black uppercase">Phase 01 Complete</span>
+        <div class="archive-card bg-white border-8 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col h-full">
+            <div class="flex-1">
+                <div class="flex justify-between items-start mb-8">
+                    <span class="bg-blue-600 text-white px-3 py-1 text-[10px] font-black uppercase">Phase 01 Complete</span>
                     <span class="mono text-xs font-bold text-slate-400">#001</span>
                 </div>
-                <h3 class="u-font text-3xl font-black mb-4 uppercase leading-tight italic">Jasper AI: The ROI Audit</h3>
-                <p class="font-bold text-slate-600 mb-8 uppercase text-sm leading-relaxed">A deep dive into brand voice consistency for solo creators and content engineering.</p>
+                <h3 class="u-font text-3xl font-black mb-6 uppercase leading-[1.1] italic">Jasper AI:<br>The ROI Audit</h3>
+                <p class="font-bold text-slate-600 mb-10 uppercase text-sm leading-relaxed">A deep dive into brand voice consistency for solo creators and content engineering.</p>
             </div>
-            <a href="articles/jasper-review.html" class="block w-full text-center bg-yellow-400 border-4 border-black py-4 u-font text-xs font-black uppercase hover:bg-black hover:text-white transition-colors">Open Report →</a>
+            <a href="articles/jasper-review.html" class="block w-full text-center bg-yellow-400 border-4 border-black py-4 u-font text-xs font-black uppercase hover:bg-black hover:text-white transition-colors mt-auto">Open Report →</a>
         </div>
 
-     <main class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-    
-    <div class="archive-card ..."> ... </div>
-
-    <div class="archive-card bg-zinc-900 text-white border-8 border-black p-6 transition-all shadow-[8px_8px_0px_0px_rgba(59,130,246,1)] flex flex-col justify-between">
-        <div>
-            <div class="flex justify-between items-start mb-6">
-                <span class="bg-blue-600 text-white px-2 py-1 text-[10px] font-black uppercase">Phase 02 Live</span>
-                <span class="mono text-xs font-bold text-slate-500">#002</span>
+        <div class="archive-card claude-card bg-zinc-900 text-white border-8 border-black p-8 shadow-[8px_8px_0px_0px_rgba(59,130,246,1)] flex flex-col h-full">
+            <div class="flex-1">
+                <div class="flex justify-between items-start mb-8">
+                    <span class="bg-blue-600 text-white px-3 py-1 text-[10px] font-black uppercase">Phase 02 Live</span>
+                    <span class="mono text-xs font-bold text-slate-500">#002</span>
+                </div>
+                <h3 class="u-font text-3xl font-black mb-6 uppercase leading-[1.1] italic text-white">Claude 3.5:<br>The Soul Test</h3>
+                <p class="font-bold text-slate-400 mb-10 uppercase text-sm leading-relaxed">Analyzing the shift from generative text to logical workspace architectures.</p>
             </div>
-            <h3 class="u-font text-3xl font-black mb-4 uppercase leading-tight italic">Claude 3.5: The Soul Test</h3>
-            <p class="font-bold text-slate-400 mb-8 uppercase text-sm leading-relaxed">Analyzing the shift from generative text to logical workspace architectures.</p>
+            <a href="articles/claude-audit.html" class="block w-full text-center bg-white text-black border-4 border-black py-4 u-font text-xs font-black uppercase hover:bg-blue-600 hover:text-white transition-colors mt-auto">Read Audit →</a>
         </div>
-        <a href="articles/claude-audit.html" class="block w-full text-center bg-white text-black border-4 border-black py-4 u-font text-xs font-black uppercase hover:bg-blue-600 hover:text-white transition-colors">Read Audit →</a>
-    </div>
 
-    <div class="bg-slate-200 ..."> ... </div>
-
-</main>   
-
-        <div class="bg-slate-200 border-8 border-black p-6 opacity-50 grayscale flex flex-col justify-center items-center text-center">
-            <span class="u-font text-xl font-black uppercase text-slate-400 mb-2 italic">Data Collection</span>
-            <p class="mono text-[10px] font-black uppercase tracking-tighter">Make.com: Scaling Personal Brand Workflows</p>
+        <div class="bg-slate-200 border-8 border-black p-8 flex flex-col justify-center items-center text-center opacity-60 grayscale min-h-[400px]">
+            <span class="u-font text-2xl font-black uppercase text-slate-400 mb-4 italic">Upcoming Study</span>
+            <p class="mono text-xs font-black uppercase tracking-widest text-slate-500">Make.com: Scaling Personal Brand Workflows</p>
         </div>
 
     </main>
 
-    <footer class="max-w-7xl mx-auto mt-32 border-t-8 border-black pt-8 pb-16 flex justify-between">
-        <span class="mono text-[10px] font-black uppercase">© 2026 NextGenStacks Intelligence Unit</span>
-        <span class="mono text-[10px] font-black uppercase">Status: 100% Operational</span>
+    <footer class="max-w-7xl mx-auto mt-40 border-t-8 border-black pt-12 pb-20 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="flex flex-col gap-2">
+            <span class="mono text-[10px] font-black uppercase tracking-widest">© 2026 NextGenStacks Intelligence Unit</span>
+            <div class="flex gap-4">
+                <span class="w-3 h-3 bg-green-500 animate-pulse rounded-full"></span>
+                <span class="mono text-[10px] font-black uppercase">System Status: 100% Operational</span>
+            </div>
+        </div>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="u-font text-[10px] font-black uppercase border-b-4 border-black hover:text-blue-600 transition-colors">Return to Top ↑</button>
     </footer>
 
 </body>
