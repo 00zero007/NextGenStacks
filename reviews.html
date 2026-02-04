@@ -3,47 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reviews Archive | NextGenStacks</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22black%22/><text y=%22.9em%22 font-size=%2290%22 font-family=%22Arial%22 font-weight=%22bold%22 fill=%22%233b82f6%22>N</text></svg>">
+    <title>THE ARCHIVE | NextGenStacks Research</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22black%22/><text y=%22.9em%22 font-size=%2280%22 font-family=%22Arial%22 font-weight=%22bold%22 fill=%22%233b82f6%22>N</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css"> <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Unbounded:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&family=Unbounded:wght@900&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f0f0f0; }
+        .u-font { font-family: 'Unbounded', sans-serif; }
+        .mono { font-family: 'Space Mono', monospace; }
+        .archive-card:hover { transform: translate(-8px, -8px); box-shadow: 16px 16px 0px 0px rgba(0,0,0,1); }
+    </style>
 </head>
-<body class="bg-white">
+<body class="p-4 md:p-8">
 
-    <nav class="border-b-4 border-black p-6 flex justify-between items-center bg-white sticky top-0 z-50">
-        <a href="index.html" class="u-font font-black text-2xl tracking-tighter italic">NGS</a>
-        <div class="hidden md:flex gap-8 font-black text-xs uppercase">
-            <a href="index.html">Home</a>
-            <a href="lab-reports.html">Lab Reports</a>
-            <a href="mission.html">Our Mission</a>
+    <header class="max-w-7xl mx-auto mb-20 flex justify-between items-end border-b-8 border-black pb-8">
+        <div>
+            <span class="mono text-sm font-black uppercase tracking-widest text-blue-600">// Database_Access_Granted</span>
+            <h1 class="u-font text-5xl md:text-8xl font-black uppercase mt-2">The<br>Archive</h1>
         </div>
-    </nav>
-
-    <header class="py-20 px-8 bg-blue-600 text-white border-b-8 border-black">
-        <div class="max-w-7xl mx-auto">
-            <h1 class="u-font text-6xl md:text-8xl font-black uppercase italic mb-6">The Archive.</h1>
-            <p class="text-xl font-bold max-w-2xl">Every tool, every stack, every line of code tested in our labs. No fluff, just pure performance data.</p>
-        </div>
+        <a href="index.html" class="bg-black text-white px-6 py-3 u-font text-xs uppercase hover:bg-yellow-400 hover:text-black transition-all mb-2">Back to Lab</a>
     </header>
 
-    <main class="max-w-7xl mx-auto py-24 px-8">
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-            
-            <div class="border-4 border-black p-8 bg-slate-50 hover-lift shadow-[10px_10px_0px_0px_rgba(0,0,0,1)]">
-                <span class="text-[10px] font-black uppercase bg-black text-white px-2 py-1">AI Writing</span>
-                <h2 class="u-font text-2xl font-black mt-6">Jasper AI Review: The 2026 Verdict</h2>
-                <p class="mt-4 text-sm font-bold text-slate-600 line-clamp-3">Is it still the king of enterprise content? We push Jasper to its limits in this deep dive.</p>
-                <a href="articles/jasper-review.html" class="inline-block mt-8 font-black text-sm underline hover:text-blue-600 uppercase">Read Report →</a>
-            </div>
+    <div class="max-w-7xl mx-auto mb-12 flex flex-wrap gap-4">
+        <button class="bg-black text-white px-4 py-2 font-black text-xs uppercase border-4 border-black">All Reports</button>
+        <button class="bg-white text-black px-4 py-2 font-black text-xs uppercase border-4 border-black hover:bg-blue-600 hover:text-white">AI Content</button>
+        <button class="bg-white text-black px-4 py-2 font-black text-xs uppercase border-4 border-black hover:bg-blue-600 hover:text-white">Workflow Automation</button>
+    </div>
 
-            <div class="border-4 border-black p-8 bg-yellow-400 opacity-50 grayscale">
-                <span class="text-[10px] font-black uppercase bg-black text-white px-2 py-1">Hosting</span>
-                <h2 class="u-font text-2xl font-black mt-6">Hostinger Pro: High-Speed Analysis</h2>
-                <p class="mt-4 text-sm font-bold text-black">Coming Soon - Testing in progress...</p>
+    <main class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="archive-card bg-white border-8 border-black p-6 transition-all shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between">
+            <div>
+                <div class="flex justify-between items-start mb-6">
+                    <span class="bg-blue-600 text-white px-2 py-1 text-[10px] font-black uppercase">Phase 01 Complete</span>
+                    <span class="mono text-xs font-bold text-slate-400">#001</span>
+                </div>
+                <h3 class="u-font text-3xl font-black mb-4 uppercase leading-tight italic">Jasper AI: The ROI Audit</h3>
+                <p class="font-bold text-slate-600 mb-8 uppercase text-sm leading-relaxed">A deep dive into brand voice consistency for solo creators and content engineering.</p>
             </div>
-
+            <a href="articles/jasper-review.html" class="block w-full text-center bg-yellow-400 border-4 border-black py-4 u-font text-xs font-black uppercase hover:bg-black hover:text-white transition-colors">Open Report →</a>
         </div>
+
+        <div class="bg-slate-200 border-8 border-black p-6 opacity-50 grayscale flex flex-col justify-center items-center text-center">
+            <span class="u-font text-xl font-black uppercase text-slate-400 mb-2 italic">Upcoming Study</span>
+            <p class="mono text-[10px] font-black uppercase tracking-tighter">Claude 3.5: The Soul vs. Logic Benchmark</p>
+        </div>
+
+        <div class="bg-slate-200 border-8 border-black p-6 opacity-50 grayscale flex flex-col justify-center items-center text-center">
+            <span class="u-font text-xl font-black uppercase text-slate-400 mb-2 italic">Data Collection</span>
+            <p class="mono text-[10px] font-black uppercase tracking-tighter">Make.com: Scaling Personal Brand Workflows</p>
+        </div>
+
     </main>
+
+    <footer class="max-w-7xl mx-auto mt-32 border-t-8 border-black pt-8 pb-16 flex justify-between">
+        <span class="mono text-[10px] font-black uppercase">© 2026 NextGenStacks Intelligence Unit</span>
+        <span class="mono text-[10px] font-black uppercase">Status: 100% Operational</span>
+    </footer>
 
 </body>
 </html>
