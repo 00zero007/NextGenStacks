@@ -3,148 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OUR MISSION | NEXTGENSTACKS | INDEPENDENT ANALYSIS</title>
+    <title>OUR MISSION | NEXTGENSTACKS</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        :root { --ngs-blue: #0052FF; --ngs-dark: #050505; --ngs-gray: #F3F4F6; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fff; color: #1a1a1a; overflow-x: hidden; }
+        :root { --ngs-blue: #0052FF; --ngs-dark: #000000; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fff; color: #000; line-height: 1.6; }
         .u-font { font-family: 'Unbounded', sans-serif; }
         
-        /* Noise & Texture */
-        .noise-bg { background-image: url("https://www.transparenttextures.com/patterns/cubes.png"); }
+        /* Layout Elements */
+        .section-container { border-bottom: 2px solid #000; padding: 80px 0; }
+        .grid-accent { background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
         
-        /* Grid Layouts */
-        .bento-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.5rem; }
-        .bento-item { background: #fff; border: 2px solid #000; box-shadow: 4px 4px 0px #000; padding: 2rem; transition: 0.3s; }
-        .bento-item:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0px var(--ngs-blue); }
-
-        /* Marquee Effect for "Noise" */
-        .marquee { white-space: nowrap; overflow: hidden; background: #000; color: #fff; padding: 10px 0; font-family: 'Unbounded'; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; }
-        .marquee-content { display: inline-block; animation: marquee 20s linear infinite; }
+        /* Typography */
+        h1 { font-size: clamp(3rem, 10vw, 8rem); font-weight: 900; line-height: 0.9; text-transform: uppercase; letter-spacing: -0.04em; }
+        h2 { font-family: 'Unbounded'; font-size: 1.5rem; font-weight: 800; text-transform: uppercase; margin-bottom: 2rem; }
+        
+        /* Animation */
+        .marquee { white-space: nowrap; overflow: hidden; background: #000; color: #fff; padding: 12px 0; }
+        .marquee-inner { display: inline-block; animation: marquee 30s linear infinite; font-family: 'Unbounded'; font-size: 12px; font-weight: 700; text-transform: uppercase; }
         @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-        .evidence-tag { background: var(--ngs-blue); color: #fff; padding: 2px 8px; font-weight: 800; font-size: 10px; text-transform: uppercase; }
+        .content-box { border: 2px solid #000; padding: 2rem; background: #fff; transition: 0.3s ease; }
+        .content-box:hover { box-shadow: 10px 10px 0px var(--ngs-blue); transform: translate(-5px, -5px); }
     </style>
 </head>
-<body class="noise-bg">
+<body class="grid-accent">
 
-    <div class="marquee">
-        <div class="marquee-content">
-            EVIDENCE-FIRST // INDEPENDENT ANALYSIS // NO MARKETING HYPE // SOVEREIGN STACKS // ROI DRIVEN // AUDITED INTELLIGENCE // EVIDENCE-FIRST // INDEPENDENT ANALYSIS // NO MARKETING HYPE // SOVEREIGN STACKS // ROI DRIVEN // AUDITED INTELLIGENCE // 
-        </div>
-    </div>
-
-    <nav class="border-b-2 border-black p-6 flex justify-between items-center bg-white sticky top-0 z-50">
+    <nav class="border-b-2 border-black sticky top-0 bg-white/90 backdrop-blur-md z-50 p-6 flex justify-between items-center">
         <div class="flex items-center gap-4">
-            <div class="bg-black text-white p-2 u-font font-black text-xl">NGS</div>
-            <div class="u-font font-bold text-lg tracking-tighter">NEXTGENSTACKS</div>
+            <div class="bg-black text-white px-3 py-1 u-font font-black text-xl">NGS</div>
+            <span class="u-font font-bold text-sm tracking-tighter hidden md:block">NEXTGENSTACKS</span>
         </div>
-        <div class="hidden md:flex gap-8 u-font text-[10px] font-bold uppercase">
-            <a href="#" class="hover:text-blue-600">Intelligence</a>
-            <a href="#" class="hover:text-blue-600">The Archive</a>
-            <a href="#" class="hover:text-blue-600 text-blue-600 underline">Our Mission</a>
+        <div class="flex gap-6 u-font text-[10px] font-bold uppercase tracking-widest">
+            <a href="#">Intelligence</a>
+            <a href="#">The Archive</a>
+            <a href="#" class="text-blue-600">Our Mission</a>
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-6 py-20">
+    <div class="marquee">
+        <div class="marquee-inner">
+            EVIDENCE OVER PROMISES // CLARITY OVER NOISE // INDEPENDENT ANALYSIS // LONG-TERM VALUE // EVIDENCE OVER PROMISES // CLARITY OVER NOISE // INDEPENDENT ANALYSIS // LONG-TERM VALUE //
+        </div>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-6">
         
-        <header class="mb-32">
-            <div class="evidence-tag mb-4 inline-block">Official Lab Manifesto</div>
-            <h1 class="u-font text-5xl md:text-8xl font-black leading-none mb-8">INDEPENDENT <br>ANALYSIS FOR A <br><span class="text-blue-600 italic">NOISY WORLD.</span></h1>
-            <p class="text-2xl text-gray-500 max-w-3xl leading-relaxed">NextGenStacks exists to fix the problem of marketing hype. We focus on clarity, evidence, and long-term value.</p>
+        <header class="py-32 border-b-2 border-black">
+            <h1 class="u-font mb-10">OUR<br>MISSION</h1>
+            <p class="text-3xl md:text-5xl font-extrabold text-blue-600 italic leading-tight">
+                Independent Analysis for a Noisy Digital World
+            </p>
         </header>
 
-        <section class="mb-40 grid md:grid-cols-2 gap-20">
-            <div>
-                <h2 class="u-font text-3xl font-black mb-6">01. WHY WE EXIST</h2>
-                <div class="w-20 h-2 bg-black mb-8"></div>
+        <section class="section-container grid md:grid-cols-12 gap-10">
+            <div class="md:col-span-4">
+                <h2>01. WHY NEXTGENSTACKS EXISTS</h2>
             </div>
-            <div class="space-y-6 text-xl text-gray-700 leading-loose">
-                <p>The modern digital landscape is powerful — but deeply confusing. AI tools, platforms, and “solutions” are released faster than anyone can properly evaluate them.</p>
-                <p class="font-bold text-black">Most users are forced to rely on marketing claims or influencer opinions. We provide the antidote: Smarter digital decisions based on real analysis — not hype.</p>
-            </div>
-        </section>
-
-        <section class="mb-40">
-            <h2 class="u-font text-3xl font-black mb-12 text-center italic">02. EVIDENCE-FIRST APPROACH</h2>
-            <div class="bento-grid">
-                <div class="bento-item col-span-12 md:col-span-6 border-l-8 border-l-blue-600">
-                    <span class="u-font text-[10px] font-black text-blue-600 uppercase tracking-widest">Phase 01 // Deep Analysis</span>
-                    <h3 class="u-font text-2xl font-black my-4">Long-Form Audits</h3>
-                    <p class="text-gray-600 leading-relaxed">Comprehensive reviews that examine performance, limitations, trade-offs, and real-world usability over time. We don't skip the hard questions.</p>
-                </div>
-                <div class="bento-item col-span-12 md:col-span-6 border-l-8 border-l-black">
-                    <span class="u-font text-[10px] font-black text-gray-400 uppercase tracking-widest">Phase 02 // Comparisons</span>
-                    <h3 class="u-font text-2xl font-black my-4">Focused Comparisons</h3>
-                    <p class="text-gray-600 leading-relaxed">Direct comparisons between similar tools to help readers understand differences, strengths, and use-case suitability without unnecessary complexity.</p>
-                </div>
-                <div class="bento-item col-span-12">
-                    <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-                        <div>
-                            <span class="u-font text-[10px] font-black text-green-600 uppercase tracking-widest">Phase 03 // Quick Guides</span>
-                            <h3 class="u-font text-2xl font-black my-4">Quick Decision Guides</h3>
-                            <p class="text-gray-600 max-w-xl">Concise summaries for tools that have already proven their value, designed for fast, informed decisions.</p>
-                        </div>
-                        <div class="bg-gray-100 p-6 u-font text-xs font-bold border-2 border-black">
-                            STANDARD: CLARITY OVER PERSUASION
-                        </div>
-                    </div>
-                </div>
+            <div class="md:col-span-8 space-y-6 text-xl md:text-2xl font-medium">
+                <p>The modern digital landscape is powerful — but deeply confusing.</p>
+                <p class="text-gray-500">AI tools, platforms, and “solutions” are released faster than anyone can properly evaluate them. Most users are forced to rely on marketing claims, influencer opinions, or surface-level reviews. As a result, people adopt tools they don’t fully understand, don’t truly need, or can’t effectively integrate into their workflow.</p>
+                <p class="bg-black text-white p-6 inline-block">NextGenStacks exists to fix this problem.</p>
+                <p>We are an independent, content-driven research platform focused on clarity, evidence, and long-term value. Our goal is simple: to help people make smarter digital decisions based on real analysis — not hype.</p>
             </div>
         </section>
 
-        <section class="mb-40 bg-black text-white p-12 md:p-20 relative overflow-hidden">
-            <div class="relative z-10">
-                <h2 class="u-font text-3xl font-black mb-10 text-blue-500 italic">03. HOW WE MAKE MONEY</h2>
-                <div class="grid md:grid-cols-2 gap-16">
-                    <div class="space-y-6">
-                        <p class="text-xl leading-relaxed">NextGenStacks is funded through affiliate partnerships. Some links may earn us a commission at no additional cost to you.</p>
-                        <div class="border-l-2 border-blue-500 pl-6 italic text-gray-400">
-                            "Our editorial decisions are made before monetization is considered, not after."
-                        </div>
-                    </div>
-                    <ul class="space-y-4 u-font text-xs uppercase tracking-widest">
-                        <li class="flex items-center gap-3 text-red-500"><span class="w-2 h-2 bg-red-500 rounded-full"></span> No promotion for high pay</li>
-                        <li class="flex items-center gap-3 text-red-500"><span class="w-2 h-2 bg-red-500 rounded-full"></span> No hidden weaknesses</li>
-                        <li class="flex items-center gap-3 text-red-500"><span class="w-2 h-2 bg-red-500 rounded-full"></span> No conclusion adjustments</li>
+        <section class="section-container">
+            <h2 class="mb-12">02. OUR EVIDENCE-FIRST APPROACH</h2>
+            <p class="text-2xl font-bold mb-16 max-w-4xl">We believe trust is earned through transparency and verification. Every tool, platform, or system we discuss is evaluated through direct use, comparison, and practical testing. We focus on how products behave in real workflows — not how they are advertised.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="content-box">
+                    <h3 class="u-font font-bold text-blue-600 mb-4 text-sm">Deep Analysis (Long-Form)</h3>
+                    <p class="text-gray-600">Comprehensive reviews and audits that examine performance, limitations, trade-offs, and real-world usability over time.</p>
+                </div>
+                <div class="content-box">
+                    <h3 class="u-font font-bold text-blue-600 mb-4 text-sm">Focused Comparisons (Mid-Form)</h3>
+                    <p class="text-gray-600">Direct comparisons between similar tools to help readers understand differences, strengths, and use-case suitability without unnecessary complexity.</p>
+                </div>
+                <div class="content-box">
+                    <h3 class="u-font font-bold text-blue-600 mb-4 text-sm">Quick Decision Guides (Short-Form)</h3>
+                    <p class="text-gray-600">Concise summaries for tools that have already proven their value, designed to help readers make fast, informed decisions.</p>
+                </div>
+            </div>
+            <p class="mt-16 u-font text-xs font-black uppercase tracking-[0.3em] text-center bg-gray-100 py-4">Across all formats, the standard remains the same: clarity over persuasion.</p>
+        </section>
+
+        <section class="section-container bg-blue-50 -mx-6 px-6">
+            <h2 class="mb-10">03. HOW WE MAKE MONEY (FULL TRANSPARENCY)</h2>
+            <div class="grid md:grid-cols-2 gap-20">
+                <div class="space-y-6">
+                    <p class="text-xl font-bold">NextGenStacks is funded through affiliate partnerships.</p>
+                    <p class="text-gray-600">This means that some links on this site may earn us a commission if you choose to purchase through them. This comes at no additional cost to you.</p>
+                </div>
+                <div class="space-y-8">
+                    <p class="u-font text-xs font-black text-red-600 tracking-widest uppercase italic">// What this does not mean:</p>
+                    <ul class="space-y-4 text-lg font-bold">
+                        <li class="flex items-center gap-4"><span class="w-2 h-2 bg-black"></span> We do not promote tools simply because they pay well</li>
+                        <li class="flex items-center gap-4"><span class="w-2 h-2 bg-black"></span> We do not hide weaknesses or trade-offs</li>
+                        <li class="flex items-center gap-4"><span class="w-2 h-2 bg-black"></span> We do not adjust conclusions to favor partners</li>
                     </ul>
                 </div>
             </div>
-            <div class="absolute -bottom-10 -right-10 u-font text-[150px] font-black text-white/5 pointer-events-none">TRUST</div>
-        </section>
-
-        <section class="mb-40 text-center max-w-4xl mx-auto">
-            <h2 class="u-font text-3xl font-black mb-8 uppercase italic">04. WHAT WE HELP YOU BUILD</h2>
-            <p class="text-xl text-gray-600 leading-loose mb-12">We help readers move away from fragmented, bloated toolsets and toward clear, repeatable workflows and systems that save time, money, and cognitive load.</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="p-4 border-2 border-black font-bold uppercase text-xs">High-Quality Tools</div>
-                <div class="p-4 border-2 border-black font-bold uppercase text-xs">Repeatable Workflows</div>
-                <div class="p-4 border-2 border-black font-bold uppercase text-xs">Reduced Cognitive Load</div>
+            <div class="mt-12 p-10 border-2 border-black bg-white">
+                <p class="text-xl font-medium mb-4">If a product fails to deliver real value, we say so — regardless of commission potential.</p>
+                <p class="text-2xl font-black italic">Our editorial decisions are made before monetization is considered, not after.</p>
             </div>
         </section>
 
-        <section class="mb-20 p-12 border-4 border-black inline-block w-full">
-            <h2 class="u-font text-3xl font-black mb-8">05. INDEPENDENCE & INTEGRITY</h2>
-            <p class="text-2xl leading-relaxed mb-8">Affiliate relationships never dictate our conclusions. We openly discuss advantages, limitations, and opportunity costs.</p>
-            <div class="flex flex-wrap gap-10 u-font text-[10px] font-black uppercase text-gray-400">
-                <span>// Clarity Over Noise</span>
-                <span>// Understanding Over Trends</span>
-                <span>// Leverage Over Short-term Wins</span>
+        <section class="section-container">
+            <h2 class="mb-10 text-center">04. WHAT WE ACTUALLY HELP YOU BUILD</h2>
+            <p class="text-2xl text-center max-w-4xl mx-auto mb-16">Our long-term vision is not about collecting tools — it’s about building systems. We help readers move away from fragmented, bloated toolsets and toward:</p>
+            
+            <div class="grid md:grid-cols-3 gap-6 text-center u-font text-[10px] font-black uppercase tracking-widest">
+                <div class="border-2 border-black p-8">Fewer but higher-quality tools</div>
+                <div class="border-2 border-black p-8">Clear, repeatable workflows</div>
+                <div class="border-2 border-black p-8">Systems that save time, money, and cognitive load</div>
+            </div>
+            <p class="mt-12 text-center text-xl font-medium text-gray-500">Whether you are a creator, marketer, strategist, or solo builder, our goal is to help you assemble digital stacks that work for you, not against you.</p>
+        </section>
+
+        <section class="py-24">
+            <h2 class="mb-10">05. INDEPENDENCE & EDITORIAL INTEGRITY</h2>
+            <div class="grid md:grid-cols-12 gap-10">
+                <div class="md:col-span-7 space-y-6 text-2xl font-bold">
+                    <p>NextGenStacks is self-funded and editorially independent.</p>
+                    <p class="text-gray-400">Affiliate relationships never dictate our conclusions. We openly discuss advantages, limitations, and opportunity costs so readers can make decisions with full context.</p>
+                </div>
+                <div class="md:col-span-5 bg-black text-white p-8 space-y-4 u-font text-[10px] font-bold uppercase tracking-[0.2em] flex flex-col justify-center">
+                    <p>We operate globally, think critically, and write for people who value:</p>
+                    <p class="text-blue-400">clarity over noise,</p>
+                    <p class="text-blue-400">understanding over trends,</p>
+                    <p class="text-blue-400">and long-term leverage over short-term wins.</p>
+                </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-black text-white py-20 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end gap-10">
+    <footer class="bg-black text-white py-24 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-10">
             <div>
-                <div class="u-font text-6xl font-black mb-4">NGS</div>
-                <p class="u-font text-[10px] tracking-[0.3em] text-blue-500">INDEPENDENT ANALYSIS FOR PEOPLE WHO PREFER EVIDENCE OVER PROMISES.</p>
+                <h2 class="u-font text-5xl font-black mb-4">NextGenStacks</h2>
+                <p class="u-font text-xs tracking-widest text-gray-500">Independent analysis for people who prefer evidence over promises.</p>
             </div>
-            <div class="text-right">
-                <div class="u-font text-[10px] font-bold mb-2">DEPLOYED IN IRAQ // GLOBAL AUDIT NODE 001</div>
-                <div class="text-gray-500 text-[10px] uppercase">© 2026 NEXTGENSTACKS GLOBAL | ALL RIGHTS RESERVED</div>
+            <div class="md:text-right text-gray-600 u-font text-[10px] font-bold uppercase tracking-[0.3em] space-y-2">
+                <p>Deployed in Iraq // Global Audit Node</p>
+                <p>© 2026 NGS | All Rights Reserved</p>
             </div>
         </div>
     </footer>
