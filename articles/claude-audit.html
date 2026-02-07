@@ -1,41 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHASE 03: THE CLOUD AI PROGRAM | LAB REPORT | NGS</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        :root { --ngs-blue: #0052FF; --ngs-dark: #000000; --ngs-accent: #F3F4F6; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fff; color: #000; scroll-behavior: smooth; }
-        .u-font { font-family: 'Unbounded', sans-serif; }
-        .lab-border { border: 2px solid #000; }
-        .bg-grid { background-image: radial-gradient(#d1d5db 1px, transparent 1px); background-size: 30px 30px; }
-        
-        /* Interactive Elements */
-        .sidebar-link:hover { color: var(--ngs-blue); border-left: 4px solid var(--ngs-blue); padding-left: 10px; }
-        .shadow-ngs { box-shadow: 8px 8px 0px #000; }
-        .shadow-blue { box-shadow: 8px 8px 0px var(--ngs-blue); }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        /* Typography */
-        .dropcap { float: left; font-family: 'Unbounded'; font-size: 4rem; line-height: 0.8; padding-right: 12px; color: var(--ngs-blue); font-weight: 900; }
-    </style>
+  <title>
+    Cloud AI Explained — Real-World Benefits, Risks, and Trade-Offs | NextGenStacks
+  </title>
+
+  <meta
+    name="description"
+    content="A pragmatic, evidence-based analysis of Cloud AI: how it works, where it delivers real ROI, where it fails, and how it compares to on-premise and hybrid systems."
+  />
+
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta
+    property="og:title"
+    content="Cloud AI Explained: Benefits, Risks, and Real-World Trade-Offs"
+  />
+  <meta
+    property="og:description"
+    content="An evidence-first breakdown of Cloud AI — covering scalability, cost, governance risks, vendor lock-in, and real-world enterprise use cases."
+  />
+  <meta property="og:url" content="https://nextgenstacks.vercel.app/articles/claude-audit.html" />
+  <meta property="og:image" content="https://nextgenstacks.vercel.app/assets/img/cloud-ai-og.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Cloud AI: What Works, What Breaks, and What No One Mentions"
+  />
+  <meta
+    name="twitter:description"
+    content="A neutral, technical review of Cloud AI — written for engineers, builders, and decision-makers."
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Unbounded:wght@400;700;900&display=swap"
+    rel="stylesheet"
+  />
 </head>
+
 <body class="bg-grid">
 
-    <nav class="border-b-2 border-black sticky top-0 bg-white/90 backdrop-blur-md z-50 p-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <span class="bg-black text-white p-1 u-font font-black text-lg">NGS</span>
-                <span class="u-font font-bold text-xs tracking-tighter hidden sm:block uppercase">NextGenStacks Lab Report</span>
-            </div>
-            <div class="flex gap-6 u-font text-[10px] font-black uppercase">
-                <span class="text-blue-600">Phase 03: LIVE</span>
-                <span class="text-gray-400">#003-REPORT</span>
-            </div>
-        </div>
-    </nav>
+    <nav class="border-b-8 border-black p-8 flex flex-col md:flex-row justify-between items-center bg-white sticky top-0 z-50">
+  <div class="flex items-center gap-4">
+    <div class="bg-black text-white p-2 u-font font-black text-2xl rotate-[-3deg]">NGS</div>
+    <a href="/index.html" class="u-font font-black text-3xl tracking-tighter">
+      NEXTGEN<span class="text-blue-600">STACKS</span>
+    </a>
+  </div>
+
+  <div class="flex gap-10 font-black text-xs uppercase tracking-[0.2em] mt-6 md:mt-0">
+    <a href="/index.html" class="hover:border-b-4 hover:border-blue-600">Intelligence</a>
+    <a href="/reviews.html" class="hover:border-b-4 hover:border-yellow-400">The Archive</a>
+    <a href="/lab-reports.html" class="hover:border-b-4 hover:border-red-600">Lab Reports</a>
+    <a href="/mission.html" class="hover:border-b-4 hover:border-blue-600">Our Manifesto</a>
+  </div>
+</nav>
 
     <main class="max-w-7xl mx-auto px-4 md:px-8 py-12">
         
@@ -178,15 +206,28 @@
         </div>
     </main>
 
-    <footer class="bg-black text-white py-20 px-6 border-t-4 border-blue-600">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
-            <div class="u-font text-4xl font-black">NGS.</div>
-            <div class="text-center md:text-right">
-                <p class="u-font text-[10px] font-bold tracking-widest text-gray-500 mb-2 uppercase">Independent Editorial Lab // Deployed in Iraq</p>
-                <p class="text-xs text-gray-400">© 2026 NEXTGENSTACKS GLOBAL AUDIT. ALL RIGHTS RESERVED.</p>
-            </div>
-        </div>
-    </footer>
+   <footer class="bg-black text-white pt-24 pb-12 px-8 mt-32">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    
+    <a href="/disclosure.html" class="underline opacity-60 hover:opacity-100">
+      Disclosure & Ethics
+    </a>
+
+    <div>
+      <h4 class="u-font text-3xl font-black mb-4">NextGenStacks</h4>
+      <p class="text-xs font-bold text-slate-400 max-w-md leading-relaxed">
+        Independent editorial lab focused on evidence-first analysis of digital tools,
+        systems, and infrastructure. No hype. No shortcuts.
+      </p>
+    </div>
+
+    <div class="md:text-right text-xs font-black uppercase tracking-[0.3em] text-slate-500">
+      <p>Deployed in Iraq</p>
+      <p>© 2026 NextGenStacks</p>
+    </div>
+
+  </div>
+</footer>
 
 </body>
 </html>

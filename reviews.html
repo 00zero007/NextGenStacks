@@ -18,6 +18,22 @@
 </head>
 <body class="p-4 md:p-8">
 
+    <nav class="border-b-8 border-black p-8 flex flex-col md:flex-row justify-between items-center bg-white sticky top-0 z-50">
+  <div class="flex items-center gap-4">
+    <div class="bg-black text-white p-2 u-font font-black text-2xl rotate-[-3deg]">NGS</div>
+    <a href="/index.html" class="u-font font-black text-3xl tracking-tighter">
+      NEXTGEN<span class="text-blue-600">STACKS</span>
+    </a>
+  </div>
+
+  <div class="flex gap-10 font-black text-xs uppercase tracking-[0.2em] mt-6 md:mt-0">
+    <a href="/index.html" class="hover:border-b-4 hover:border-blue-600">Intelligence</a>
+    <a href="/reviews.html" class="hover:border-b-4 hover:border-yellow-400">The Archive</a>
+    <a href="/lab-reports.html" class="hover:border-b-4 hover:border-red-600">Lab Reports</a>
+    <a href="/mission.html" class="hover:border-b-4 hover:border-blue-600">Our Manifesto</a>
+  </div>
+</nav>
+
     <header class="max-w-7xl mx-auto mb-20 flex flex-col md:flex-row justify-between items-start md:items-end border-b-8 border-black pb-8 gap-6">
         <div>
             <span class="mono text-sm font-black uppercase tracking-widest text-blue-600">// Database_Access_Granted</span>
@@ -65,16 +81,28 @@
 
     </main>
 
-    <footer class="max-w-7xl mx-auto mt-40 border-t-8 border-black pt-12 pb-20 flex flex-col md:flex-row justify-between items-center gap-8">
-        <div class="flex flex-col gap-2">
-            <span class="mono text-[10px] font-black uppercase tracking-widest">© 2026 NextGenStacks Intelligence Unit</span>
-            <div class="flex gap-4">
-                <span class="w-3 h-3 bg-green-500 animate-pulse rounded-full"></span>
-                <span class="mono text-[10px] font-black uppercase">System Status: 100% Operational</span>
-            </div>
-        </div>
-        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="u-font text-[10px] font-black uppercase border-b-4 border-black hover:text-blue-600 transition-colors">Return to Top ↑</button>
-    </footer>
+    <footer class="bg-black text-white pt-24 pb-12 px-8 mt-32">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    
+    <a href="/disclosure.html" class="underline opacity-60 hover:opacity-100">
+      Disclosure & Ethics
+    </a>
+
+    <div>
+      <h4 class="u-font text-3xl font-black mb-4">NextGenStacks</h4>
+      <p class="text-xs font-bold text-slate-400 max-w-md leading-relaxed">
+        Independent editorial lab focused on evidence-first analysis of digital tools,
+        systems, and infrastructure. No hype. No shortcuts.
+      </p>
+    </div>
+
+    <div class="md:text-right text-xs font-black uppercase tracking-[0.3em] text-slate-500">
+      <p>Deployed in Iraq</p>
+      <p>© 2026 NextGenStacks</p>
+    </div>
+
+  </div>
+</footer>
 
 </body>
 </html>

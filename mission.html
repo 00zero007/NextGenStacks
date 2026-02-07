@@ -30,17 +30,21 @@
 </head>
 <body class="grid-accent">
 
-    <nav class="border-b-2 border-black sticky top-0 bg-white/90 backdrop-blur-md z-50 p-6 flex justify-between items-center">
-        <div class="flex items-center gap-4">
-            <div class="bg-black text-white px-3 py-1 u-font font-black text-xl">NGS</div>
-            <span class="u-font font-bold text-sm tracking-tighter hidden md:block">NEXTGENSTACKS</span>
-        </div>
-        <div class="flex gap-6 u-font text-[10px] font-bold uppercase tracking-widest">
-            <a href="#">Intelligence</a>
-            <a href="#">The Archive</a>
-            <a href="#" class="text-blue-600">Our Mission</a>
-        </div>
-    </nav>
+    <nav class="border-b-8 border-black p-8 flex flex-col md:flex-row justify-between items-center bg-white sticky top-0 z-50">
+  <div class="flex items-center gap-4">
+    <div class="bg-black text-white p-2 u-font font-black text-2xl rotate-[-3deg]">NGS</div>
+    <a href="/index.html" class="u-font font-black text-3xl tracking-tighter">
+      NEXTGEN<span class="text-blue-600">STACKS</span>
+    </a>
+  </div>
+
+  <div class="flex gap-10 font-black text-xs uppercase tracking-[0.2em] mt-6 md:mt-0">
+    <a href="/index.html" class="hover:border-b-4 hover:border-blue-600">Intelligence</a>
+    <a href="/reviews.html" class="hover:border-b-4 hover:border-yellow-400">The Archive</a>
+    <a href="/lab-reports.html" class="hover:border-b-4 hover:border-red-600">Lab Reports</a>
+    <a href="/mission.html" class="hover:border-b-4 hover:border-blue-600">Our Manifesto</a>
+  </div>
+</nav>
 
     <div class="marquee">
         <div class="marquee-inner">
@@ -142,18 +146,28 @@
 
     </main>
 
-    <footer class="bg-black text-white py-24 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-10">
-            <div>
-                <h2 class="u-font text-5xl font-black mb-4">NextGenStacks</h2>
-                <p class="u-font text-xs tracking-widest text-gray-500">Independent analysis for people who prefer evidence over promises.</p>
-            </div>
-            <div class="md:text-right text-gray-600 u-font text-[10px] font-bold uppercase tracking-[0.3em] space-y-2">
-                <p>Deployed in Iraq // Global Audit Node</p>
-                <p>© 2026 NGS | All Rights Reserved</p>
-            </div>
-        </div>
-    </footer>
+   <footer class="bg-black text-white pt-24 pb-12 px-8 mt-32">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    
+    <a href="/disclosure.html" class="underline opacity-60 hover:opacity-100">
+     Disclosure & Ethics
+    </a>
+
+    <div>
+      <h4 class="u-font text-3xl font-black mb-4">NextGenStacks</h4>
+      <p class="text-xs font-bold text-slate-400 max-w-md leading-relaxed">
+        Independent editorial lab focused on evidence-first analysis of digital tools,
+        systems, and infrastructure. No hype. No shortcuts.
+      </p>
+    </div>
+
+    <div class="md:text-right text-xs font-black uppercase tracking-[0.3em] text-slate-500">
+      <p>Deployed in Iraq</p>
+      <p>© 2026 NextGenStacks</p>
+    </div>
+
+  </div>
+</footer>
 
 </body>
 </html>

@@ -1,34 +1,52 @@
-/* الروابط الأساسية والخطوط */
-:root {
-    --primary-blue: #3b82f6;
-    --neo-black: #000000;
+:root{
+  --primary-blue:#3b82f6;
+  --neo-black:#000000;
 }
 
-body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    scroll-behavior: smooth;
+.ngs-body{
+  font-family:'Plus Jakarta Sans', sans-serif;
+  background-color:#f8fafc;
+  color:#0f172a;
+  overflow-x:hidden;
+  scroll-behavior:smooth;
 }
 
-.u-font {
-    font-family: 'Unbounded', sans-serif;
+.u-font{ font-family:'Unbounded', sans-serif; }
+
+/* HERO background (moved from inline <style>) */
+.hero-img-bg{
+  background:
+    linear-gradient(rgba(0,0,0,0.8), rgba(15,23,42,0.5)),
+    url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
-/* تأثير الرفع النيومورفي المشترك */
-.hover-lift {
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+/* Reveal animations */
+@keyframes revealText{
+  0%{opacity:0; transform:translateY(40px); filter:blur(10px);}
+  100%{opacity:1; transform:translateY(0); filter:blur(0);}
+}
+.anim-1{animation:revealText 1s ease-out forwards;}
+.anim-2{animation:revealText 1s ease-out .4s forwards; opacity:0;}
+.anim-3{animation:revealText 1s ease-out .8s forwards; opacity:0;}
+
+/* Visual accents */
+.gradient-text{
+  background:linear-gradient(90deg,#fbbf24,#ef4444,#3b82f6);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
-.hover-lift:hover {
-    transform: translate(-5px, -5px);
-    box-shadow: 10px 10px 0px 0px var(--neo-black);
+.click-bounce:active{ transform:scale(0.95); }
+
+.hover-lift{
+  transition:all .3s cubic-bezier(.175,.885,.32,1.275);
+}
+.hover-lift:hover{
+  transform:translateY(-10px) rotate(1deg);
 }
 
-/* تنسيق القائمة العلوية المشترك */
-nav a {
-    transition: color 0.2s;
-}
-
-nav a:hover {
-    color: var(--primary-blue);
-    text-decoration: underline;
-}
+/* Nav hover (safe global rule) */
+nav a{ transition: all .2s; }
